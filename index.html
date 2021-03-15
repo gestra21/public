@@ -2,7 +2,6 @@
 <html>
 <head>
    <link rel="stylesheet" type="text/css" href="/public/style.css" />
-
 </head>
 <body>
 
@@ -10,17 +9,7 @@
   <div class="item1">Header</div>
   <div class="item2">Menu</div>
   <div class="item3">
- 
-<div class="grid-container">
-  <div>1</div>
-  <div>2</div>
-  <div>3</div>  
-  <div>4</div>
-  <div>5</div>
-  <div>6</div>  
-  <div>7</div>
-  <div>8</div>
-</div>
+ <p id="demo"></p>
 
  
  </div>  
@@ -28,6 +17,9 @@
   <div class="item5">Footer</div>
 </div>
 
+ <script>
+var container="<div class="grid-container"><div>1</div><div>2</div><div>3</div>  <div>4</div><div>5</div><div>6</div>  <div>7</div><div>8</div></div>";
+document.getElementById("demo")=container;
 </body>
 </html>
 
