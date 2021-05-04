@@ -1,0 +1,94 @@
+<html>
+
+<head>
+
+    <!-- General Settings -->
+    <meta charset="utf-8">
+    <meta http-equiv="content-language" content="en-us">
+    <base href="{global.baseUrl}" />
+
+    <!-- Meta Tags -->
+    <title>{head.title} | {global.appName}</title>
+    <meta name="description" content="{head.description}">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Static Assets -->
+
+    <link rel="stylesheet" type="text/css" href="/public/app.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="header">
+        <!-- Logo -->
+        <a class="logo" href="/">
+            <!--  <img src="public/logo.png" alt="Logo" />  -->
+        </a>
+        <ul class="menu" style="float: left;">
+            <li class="loggedIn"> <span style="font-size:20px;cursor:pointer; padding: 20px;"
+                    onclick="openNav()">&#9776;</span>
+            </li>
+        </ul>
+        <!-- Navigation -->
+        <ul class="menu">
+            <li>
+                <a href="/public/.pacific.html">Pacific</a>
+            </li>
+            <li>
+                <a href="/public/.m10.html">M10</a>
+            </li>
+            <li>
+                <a href="/public/.home.html">Home</a>
+            </li>
+
+
+        </ul>
+    </div>
+    <div id="sidenav" class="sidenav">
+        <a href="javascript:void(0)" onclick="closeNav()">&times;</a>
+        <a href="/mining/index?template=dev_homepage">HOME</a>
+        <a href="#"></a>
+        <a href="#">MINING</a>
+        <a href="/mining/index?template=dev_vbtBeta">- ViaBTC</a>
+        <a href="/mining/index?template=dev_spBeta">- SlushPool</a>
+        <a href="#"></a>
+        <a href="/">FX</a>
+        <a href="/mining/index?template=dev_fx2Beta">- Major</a>
+    </div>
+    
+    <!-- Page-Specific Content -->
+    <div id="main">
+        <div class="content">
+            <div style="margin-top: 75px;">
+<!--<img src="fiboN.jpg">-->
+</div>
+
+
+        </div>
+        <script>
+            function openNav() {
+                document.getElementById("sidenav").style.width = "200px";
+                document.getElementById("main").style.marginLeft = "100px";
+            }
+
+            function closeNav() {
+                document.getElementById("sidenav").style.width = "0";
+                document.getElementById("main").style.marginLeft = "0";
+            }
+        </script>
+    </div>
+    <!-- Footer -->
+    <div class="footer">
+        <div class="copyright">@ Copyright Neil Filippelli 2021 | All Rights Reserved</div>
+    </div>
+
+    </div>
+</body>
+
+</html>
