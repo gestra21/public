@@ -215,6 +215,7 @@
         .grid-container {
             display: grid;
             grid-template-columns: auto auto auto auto;
+            grid-template-rows: auto;
             grid-gap: 5px;
             background-color: #000000;
             padding: 0px;
@@ -226,7 +227,7 @@
         }
 
         .grid-container>div {
-            background-color: rgb(255, 255, 255);
+            background-color: rgb(0, 0, 0);
             text-align: center;
             padding: 10px 10px;
             margin: 0px;
@@ -234,9 +235,7 @@
             color: rgb(255, 255, 255);
             border-radius: 10px;
             border: 0px solid;
-            box-shadow: 3px 3px 8px 0px #ffffff;
-            overflow: auto;
-            overflow: auto;
+            /*box-shadow: 3px 3px 8px 0px #ffffff;*/
             min-width: 15%;
         }
 
@@ -260,12 +259,10 @@
             grid-column: 3;
             grid-row: 2 / span 2;
         }
-
-        
     </style>
 </head>
 <header>
-    <div class="header">
+    <div class="header" style=" width: 100%;">
         <!-- Logo -->
         <a class="logo" href="/">
             <!--  <img src="public/logo.png" alt="Logo" />  -->
@@ -307,23 +304,28 @@
 <body>
     <!-- Icon Bar (Sidebar - hidden on small screens) -->
     <div class="w3-sidebar w3-small w3-hide-small w3-center w3-black"
-        style="border-radius: 10px;margin-top: 90px; margin-left: 25px; background-color: rgba(0,0,0,1); color: snow;">
+        style="border-radius: 10px;margin-top: 70px; margin-left: 25px; background-color: rgba(0,0,0,1); color: snow;">
         <!-- Avatar image in top left corner -->
         <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black" style="margin-top: 0px; ">
-            <i class="fa fa-home w3-xxlarge"></i>
-            <p style=" color: snow;">HOME</p>
+            <i class="fa fa-line-chart w3-large"></i>
+            <p style=" color: snow;">STATS</p>
+        </a>
+        <a href="#chart" class="w3-bar-item w3-button w3-padding-large w3-black" style="margin-top: 0px; ">
+            <i class="fa fa-bar-chart w3-large"></i>
+            <p style=" color: snow;">CHART</p>
         </a>
         <a href="#demo" class="w3-bar-item w3-button w3-padding-large">
-            <i class="	fa fa-bar-chart w3-xxlarge" style="color:green"></i>
-            <p style=" color: snow;">DEMO</p>
-            <a href="#backtest" class="w3-bar-item w3-button w3-padding-large">
-                <i class="fa fa-database w3-xxlarge" style="color:green"></i>
-                <p style=" color: snow;">BACKTEST</p>
-            </a>
-            <a href="#real" class="w3-bar-item w3-button w3-padding-large">
-                <i class="	fa fa-pie-chart w3-xxlarge" style="color:rgb(255, 0, 0)"></i>
-                <p style=" color: snow;">REAL</p>
-            </a>
+            <i class="	fa fa-area-chart w3-large" style="color:rgb(253, 253, 253)"></i>
+            <p style=" color: snow;">PRICE & <BR>ORDERS</p>
+        </a>
+        <a href="#backtest" class="w3-bar-item w3-button w3-padding-large">
+            <i class="fa fa-database w3-large" style="color:rgb(255, 255, 255)"></i>
+            <p style=" color: snow;">BACKTEST</p>
+        </a>
+        <a href="#real" class="w3-bar-item w3-button w3-padding-large">
+            <i class="	fa fa-pie-chart w3-large" style="color:rgb(255, 0, 0)"></i>
+            <p style=" color: snow;">REAL</p>
+        </a>
     </div>
 
 
@@ -333,8 +335,12 @@
         style="margin-top: 50px; margin-left: 0px; background-color: black; color: snow;">
         <div class="w3-bar w3-blackw3-center w3-small">
             <a href="#" class="w3-bar-item w3-button" style="width:25% !important; color: snow;">HOME</a>
-            <a href="#demo" class="w3-bar-item w3-button" style="width:25% !important; color: rgb(0, 255, 0);">DEMO</a>
-            <a href="#backtest" class="w3-bar-item w3-button" style="width:25% !important; color: rgb(0, 255, 0);">BACKTEST</a>
+            <a href="#chart" class="w3-bar-item w3-button"
+                style="width:25% !important; color: rgb(0, 255, 0);">CHART</a>
+            <a href="#demo" class="w3-bar-item w3-button"
+                style="width:25% !important; color: rgb(0, 255, 0);">PRICE&ORDERS</a>
+            <a href="#backtest" class="w3-bar-item w3-button"
+                style="width:25% !important; color: rgb(0, 255, 0);">BACKTEST</a>
             <a href="#real" class="w3-bar-item w3-button" style="width:25% !important; color: rgb(255, 0, 0);">REAL</a>
         </div>
     </div>
@@ -342,10 +348,56 @@
         <div class="content">
 
 
+            <div id="home" style="padding-top: 70px; margin-bottom: -40px;">
+
+                <div class="grid-container">
+                    <div style="grid-column: span 4; max-width: 100%;">
+                        <a href="https://www.myfxbook.com/members/gestra21/mt5-6061684/8378679"><img alt="widget"
+                                src="https://widgets.myfxbook.com/widget?id=8378679&type=2&color=black" /></a>
+
+                    </div>
+                    <div style="grid-column: span 4; max-width: 100%;">
+                        <a href="https://www.myfxbook.com/members/gestra21/mt5-6061684/8378679"><img
+                                style="border-radius: 10px;" alt="widget"
+                                src="https://widgets.myfxbook.com/custom-widget?id=8378679&width=340&height=210&bart=0&linet=1&magic=-1&title=Mt5-6061684&titles=12&bgColor=000000&gridColor=bdbdbd&lineColor=0024ff&barColor=4a63fb&bar1Color=4a63fb&fontColor=ffffff&chartbgc=3a3a3a&equityColor=eff45a" /></a>
+                        <a href="https://www.myfxbook.com/members/gestra21/mt5-6061684/8378679"><img
+                                style="border-radius: 10px;" alt="widget"
+                                src="https://widgets.myfxbook.com/custom-widget?id=8378679&width=340&height=210&bart=0&linet=0&magic=-1&title=Mt5-6061684&titles=12&bgColor=000000&gridColor=bdbdbd&lineColor=0024ff&barColor=4a63fb&bar1Color=4a63fb&fontColor=ffffff&chartbgc=3a3a3a&equityColor=eff45a" /></a>
+                        <a href="https://www.myfxbook.com/members/gestra21/mt5-6061684/8378679"><img
+                                style="border-radius: 10px;" alt="widget"
+                                src="https://widgets.myfxbook.com/custom-widget?id=8378679&width=340&height=210&bart=0&linet=5&magic=-1&title=Mt5-6061684&titles=12&bgColor=000000&gridColor=bdbdbd&lineColor=0024ff&barColor=4a63fb&bar1Color=4a63fb&fontColor=ffffff&chartbgc=3a3a3a&equityColor=eff45a" /></a>
+                        <a href="https://www.myfxbook.com/members/gestra21/mt5-6061684/8378679"><img
+                                style="border-radius: 10px;" alt="widget"
+                                src="https://widgets.myfxbook.com/custom-widget?id=8378679&width=340&height=210&bart=1&linet=6&magic=-1&title=Mt5-6061684&titles=12&bgColor=000000&gridColor=bdbdbd&lineColor=0024ff&barColor=4a63fb&bar1Color=4a63fb&fontColor=ffffff&chartbgc=3a3a3a&equityColor=eff45a" /></a>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="chart" style="padding-top: 70px; margin-bottom: -40px;">
+                <div class="grid-container">
+                    <div style="grid-column: 1 / span 4;grid-row: 1; font-size:18px; color: black;">
+                        <!-- myfxbook.com browser widget - Start -->
+                        <div
+                            style="background-color: rgb(0, 0, 0); overflow: hidden;  max-width: 100%; border: solid rgba(255, 255, 255, 0); border-radius: 10px;">
+                            <script style="align-items: center;" type="text/javascript"
+                                src="https://widgets.myfxbook.com/scripts/fxBrowser.js?oid=8378679"></script>
+                        </div>
+                        <div style="font-size: 10px">
+                            © Powered by <a href='https://www.myfxbook.com' class='myfxbookLink' target='_self'
+                                rel='noopener noreferrer'><strong>Myfxbook.com</strong></a>
+                        </div>
+                        <!-- myfxbook.com browser widget - End -->
+
+                    </div>
+
+                </div>
+            </div>
+
             <div class="w3-small w3-hide-small" id="home" style="padding-top: 70px;margin-bottom: -40px;">
                 <div class="grid-containerTitle">
                     <div style="grid-column: 1 / span 4;grid-row: 1; font-size: 42;">
-                        M10 (..84)
                     </div>
                     <div>
                         <ul style="float: left;font-size: 14px;">SYMBOL:
@@ -355,29 +407,29 @@
                     </div>
                     <div>
                         <a
-                                href="https://trade.swissquote.ch/signup/public/form/full/fx/com/individual?lang=it&utm_source=google&utm_medium=cpc&utm_campaign=brand&utm_content=110706157385&gclid=CjwKCAjwm7mEBhBsEiwA_of-TOdRD6SLhYQ8TIbPfvAcmKVm2SLhrEOWnk4IoZRUeTeDnpspbo9oqxoCLpkQAvD_BwE&trackPageId=dmaptl0thknw479da4es3vcsc*5689526042&cookieId=undefined&sessionId=dmaptl0thknw479da4es3vcsc&_ga=2.248127495.1627996630.1619941694-1731766059.1619941694&_gac=1.49555028.1619951470.CjwKCAjwm7mEBhBsEiwA_of-TOdRD6SLhYQ8TIbPfvAcmKVm2SLhrEOWnk4IoZRUeTeDnpspbo9oqxoCLpkQAvD_BwE#full/fx/com/individual/step1">
+                            href="https://trade.swissquote.ch/signup/public/form/full/fx/com/individual?lang=it&utm_source=google&utm_medium=cpc&utm_campaign=brand&utm_content=110706157385&gclid=CjwKCAjwm7mEBhBsEiwA_of-TOdRD6SLhYQ8TIbPfvAcmKVm2SLhrEOWnk4IoZRUeTeDnpspbo9oqxoCLpkQAvD_BwE&trackPageId=dmaptl0thknw479da4es3vcsc*5689526042&cookieId=undefined&sessionId=dmaptl0thknw479da4es3vcsc&_ga=2.248127495.1627996630.1619941694-1731766059.1619941694&_gac=1.49555028.1619951470.CjwKCAjwm7mEBhBsEiwA_of-TOdRD6SLhYQ8TIbPfvAcmKVm2SLhrEOWnk4IoZRUeTeDnpspbo9oqxoCLpkQAvD_BwE#full/fx/com/individual/step1">
 
-                                <img src="/public/sqLogo.svg"
-                                style="margin: 0;padding: 0; max-width: 70%; height: auto; "></a>
-                                <a href="https://www.mql5.com/en/signals/992057?source=Site+Main"> <img
-                                    src="/public/mql5Signal.jfif"
-                                    style="margin: 0;padding-bottom: 15px; width: 70%; height: auto;"></a>
+                            <img src="/public/sqLogo.svg"
+                                style="border-radius: 10px;margin: 0;padding: 0; max-width: 70%; height: auto; "></a>
+                        <a href="https://www.mql5.com/en/signals/992057?source=Site+Main"> <img
+                                src="/public/mql5Signal.jpg"
+                                style="z-index: 0; background-image:  #3a3a3a; border-radius: 10px;margin: 0;padding-bottom: 15px; width: 70%; height: auto;"></a>
 
-                                    <a href="https://www.myfxbook.com/members/gestra21/mt5-6061683/8378679"><img 
+                        <a href="https://www.myfxbook.com/members/gestra21/mt5-6061684/8378679"><img
                                 src="/public/myFx.jpg"
-                                style="margin: 0;padding: 0; max-width: 70%; height: auto; background-color: rgb(56, 56, 56);"></a>
+                                style="border-radius: 10px;margin: 0;padding: 0; max-width: 70%; height: auto; background-color: rgb(56, 56, 56);"></a>
 
                     </div>
 
                     <div>
-                        <a href="https://www.myfxbook.com/members/gestra21/mt5-6061683/8378679"><img alt="widget"
-                                style="max-width:70%; height:auto;"
+                        <a href="https://www.myfxbook.com/members/gestra21/mt5-6061684/8378679"><img alt="widget"
+                                style="border-radius: 10px; max-width:70%; height:auto;"
                                 src="https://widgets.myfxbook.com/widgets/8378679/small.jpg" /></a>
 
 
                     </div>
                     <div>
-                        <iframe frameborder="0" width="70%" height="auto"
+                        <iframe style="border-radius: 10px;" frameborder="0" width="70%" height="auto"
                             src="https://www.mql5.com/en/signals/widget/signal/5d8h"></iframe>
                     </div>
                 </div>
@@ -400,12 +452,11 @@
                         <a href="https://www.mql5.com/en/signals/992057?source=Site+Main"> <img
                                 src="/public/myFx.jpg"
                                 style="margin: 10;padding: 10; max-width: 70%; height: auto; background-color: rgb(56, 56, 56);"></a>
-                        <a href="https://www.myfxbook.com/members/gestra21/mt5-6061683/8378679"><img alt="widget"
+                        <a href="https://www.myfxbook.com/members/gestra21/mt5-6061684/8378679"><img alt="widget"
                                 style="max-width:70%; height:auto;"
                                 src="https://widgets.myfxbook.com/widgets/8378679/small.jpg" /></a>
-
-
                     </div>
+
                     <div style="grid-column: span 4;">
                         <a href="https://www.mql5.com/en/signals/992057?source=Site+Main"> <img
                                 src="/public/mql5Signal.jfif"
@@ -417,162 +468,109 @@
 
             </div>
 
-            
-            <div id="data"  style="padding-top: 70px; margin-bottom: -40px;">
-                
-                <div class="grid-container">
-                <div>
-                    <span class="w3-xlarge">Performance</span><br>
-                    Signal
-                </div>
-                <div>
-                    <span class="w3-xlarge">Trades</span><br>
-                    Pairs
-                </div>
-                <div>
-                    <span class="w3-xlarge">max D.D.</span><br>
-                    Total
-                </div>
-                <div>
-                    <span class="w3-xlarge">avg % year</span><br>
-                    User
-                </div>
-            </div>
-        </div>
-            
-            
-            <div id="chart" style="padding-top: 70px; margin-bottom: -40px;">
-                <div class="grid-container">
-                    <div style="grid-column: 1 / span 4;grid-row: 1; font-size:18px; color: black;">
-                        <!-- myfxbook.com browser widget - Start -->
-                        <div>
-                            <script type="text/javascript"
-                                src="https://widgets.myfxbook.com/scripts/fxBrowser.js?oid=8378679"></script>
-                        </div>
-                        <div style="font-size: 10px">
-                            © Powered by <a href='https://www.myfxbook.com' class='myfxbookLink' target='_self'
-                                rel='noopener noreferrer'><strong>Myfxbook.com</strong></a>
-                        </div>
-                        <!-- myfxbook.com browser widget - End -->
 
-                    </div>
-
-                </div>
-            </div>
             <div id="demo" style="padding-top: 70px; margin-bottom: -40px;">
                 <div class="grid-container">
-                    <div style="grid-column: 1 / span 4;grid-row: 1; font-size:18px; color: black;">
-                        Beta test - Demo account - start 02.05.2021 / ...
-                    </div>
-                    <div style="padding: 10px; grid-column: span 4;">
-                        <h1>open trades</h1>
-                        <script class="powered" type="text/javascript"
-                            src="https://widgets.myfxbook.com/scripts/fxOpenTrades.js?oid=8378679&link=1" width="80%"
-                            height="auto"></script>
-                        </script>
-                    </div>
-                    <div style=" grid-column: span 4; max-width: 100%; height: auto;">
-                        <h1>Live Quotes</h1>
-                        
-            <iframe src="https://widgets.myfxbook.com/widgets/quotes-rate.html?symbols=11,1,28,7,2,4,14,3,29,5&columns=1,2,3,4,5,6" width="100%" height="100%" frameborder="0"></iframe>
+                    <div style="grid-column: 1 / span 4;font-size:18px; color: black; width: 100%; height: 100%;">
+                        <div
+                            style="background-color: white;  max-width: 100%; border: solid rgb(255, 255, 255); border-radius: 10px;">
 
-<!--            <iframe src="https://widgets.myfxbook.com/widgets/quotes-rate.html?symbols=11,1,28&columns=1,2,3,4,5,6" width="100%" height="100%" frameborder="0"></iframe>
-    -->
+                            <iframe
+                                src="https://widgets.myfxbook.com/widgets/quotes-rate.html?symbols=11,1,28,7,2,4,14,3,29,5&columns=1,2,3,4,5,6"
+                                width="100%" height="100%" frameborder="0"></iframe>
+                        </div>
+
+                    </div>
+                    <div style="grid-column: 1 / span 4;font-size:18px; color: black; width: 100%; height: auto;">
+                        <!-- myfxbook.com browser widget - Start -->
+                        <div
+                            style="background-color: white; overflow: hidden;  max-width: 100%; border: solid rgb(255, 255, 255); border-radius: 10px;">
+
+                            <script class="powered" type="text/javascript"
+                                src="https://widgets.myfxbook.com/scripts/fxOpenTrades.js?oid=8378679&link=1"
+                                width="100%" height="auto"></script>
+                        </div>
+
+                    </div>
+
                 </div>
-
-                    <div style=" height: auto;  grid-column: span 2">
-                        <a href="https://www.myfxbook.com/members/gestra21/mt5-6061683/8378679"><img alt="widget"
-                                style="max-width: 100%; height: auto; border-radius: 5px;" alt="widget"
-                                src="https://widgets.myfxbook.com/widgets/8378679/large.jpg" /></a>
-                    </div>
-
-                                </div>
 
             </div>
 
 
 
-            <div id="backtest" style="padding-top: 70px; margin-bottom: -40px;">
-                <div class="grid-container">
-                    <div style="height:50px;grid-column: 1 / span 3;grid-row: 1; font-size:24px; color: black;">
-                        Backtest result - 01.01.2007 / 30.04.2021
-                    </div>
-                    <div style="height:800px;grid-column: 1 / span 3;grid-row: 2/span 3;">
-                        <div class="tab">
-                            <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Leverage
-                                max3</button>
-                            <button class="tablinks" onclick="openCity(event, 'Paris')">Leverage max5</button>
-                            <button class="tablinks" onclick="openCity(event, 'Tokyo')">Leverage max8</button>
+                <div id="backtest" style="padding-top: 70px; margin-bottom: -40px;">
+                    <div class="grid-container">
+                        <div style="height:50px;grid-column: 1 / span 3;grid-row: 1; font-size:24px; color: rgb(255, 255, 255);">
+                            Backtest result - 01.01.2007 / 30.04.2021
                         </div>
+                        <div style="height:800px;grid-column: 1 / span 3;grid-row: 2/span 3;">
+                            <div class="tab">
+                                <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Leverage
+                                    max3</button>
+                                <button class="tablinks" onclick="openCity(event, 'Paris')">Leverage max5</button>
+                                <button class="tablinks" onclick="openCity(event, 'Tokyo')">Leverage max8</button>
+                            </div>
 
-                        <div id="London" class="tabcontent">
-                            <img src="/public/pacific3.jpg">
-                        </div>
+                            <div id="London" class="tabcontent">
+                                <img src="/public/pacific3.jpg">
+                            </div>
 
-                        <div id="Paris" class="tabcontent">
-                            <img src="/public/pacific5.jpg">
-                        </div>
+                            <div id="Paris" class="tabcontent">
+                                <img src="/public/pacific5.jpg">
+                            </div>
 
-                        <div id="Tokyo" class="tabcontent">
-                            <img src="/public/pacific8.jpg">
+                            <div id="Tokyo" class="tabcontent">
+                                <img src="/public/pacific8.jpg">
+                            </div>
                         </div>
                     </div>
                 </div>
+
+
             </div>
 
+            <script type="text/javascript">showMarketsWidget()</script>
 
-            <div id="real" style="padding-top: 70px; margin-bottom: 50px;">
-                <div class="grid-container">
-                    <div style="grid-row: span 4; grid-column: span 3; color: black;">
-                        <a href="https://www.myfxbook.com/members/gestra21/mt5-6061683/8378678"><img alt="widget" src="https://widgets.myfxbook.com/systems-custom-widget?uid=2276992&width=400&height=250&title=Systems&titles=12&showAllSystems=true&bgColor=ffffff&gridColor=bdbdbd&fontColor=525252&chartbgc=ffffff"/></a>
-                    </div>
-                    <div></div>
-                </div>
-            </div>
+            <script type="text/javascript">showOpenTradesWidget()</script>
 
+
+            <script>
+                function openCity(evt, cityName) {
+                    var i, tabcontent, tablinks;
+                    tabcontent = document.getElementsByClassName("tabcontent");
+                    for (i = 0; i < tabcontent.length; i++) {
+                        tabcontent[i].style.display = "none";
+                    }
+                    tablinks = document.getElementsByClassName("tablinks");
+                    for (i = 0; i < tablinks.length; i++) {
+                        tablinks[i].className = tablinks[i].className.replace(" active", "");
+                    }
+                    document.getElementById(cityName).style.display = "block";
+                    evt.currentTarget.className += " active";
+                }
+
+                // Get the element with id="defaultOpen" and click on it
+                document.getElementById("defaultOpen").click();
+            </script>
+
+
+            <script>
+                function openNav() {
+                    document.getElementById("sidenav").style.width = "200px";
+                    document.getElementById("main").style.marginLeft = "100px";
+                }
+
+                function closeNav() {
+                    document.getElementById("sidenav").style.width = "0";
+                    document.getElementById("main").style.marginLeft = "0";
+                }
+            </script>
         </div>
-
-        <script type="text/javascript">showMarketsWidget()</script>
-
-        <script type="text/javascript">showOpenTradesWidget()</script>
-
-
-        <script>
-            function openCity(evt, cityName) {
-                var i, tabcontent, tablinks;
-                tabcontent = document.getElementsByClassName("tabcontent");
-                for (i = 0; i < tabcontent.length; i++) {
-                    tabcontent[i].style.display = "none";
-                }
-                tablinks = document.getElementsByClassName("tablinks");
-                for (i = 0; i < tablinks.length; i++) {
-                    tablinks[i].className = tablinks[i].className.replace(" active", "");
-                }
-                document.getElementById(cityName).style.display = "block";
-                evt.currentTarget.className += " active";
-            }
-
-            // Get the element with id="defaultOpen" and click on it
-            document.getElementById("defaultOpen").click();
-        </script>
-
-
-        <script>
-            function openNav() {
-                document.getElementById("sidenav").style.width = "200px";
-                document.getElementById("main").style.marginLeft = "100px";
-            }
-
-            function closeNav() {
-                document.getElementById("sidenav").style.width = "0";
-                document.getElementById("main").style.marginLeft = "0";
-            }
-        </script>
-    </div>
-    <!-- Footer -->
-    <div class="footer">
-        <div class="copyright">@ Copyright Neil Filippelli 2021 | All Rights Reserved</div>
-    </div>
+        <!-- Footer -->
+        <div class="footer">
+            <div class="copyright">@ Copyright Neil Filippelli 2021 | All Rights Reserved</div>
+        </div>
 
 </body>
 
