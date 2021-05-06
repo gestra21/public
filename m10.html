@@ -260,6 +260,8 @@
             grid-column: 3;
             grid-row: 2 / span 2;
         }
+
+        
     </style>
 </head>
 <header>
@@ -275,13 +277,13 @@
          Navigation -->
         <ul class="menu" style="float: left;">
             <li>
-                <a href="/public/.home.html">Home</a>
+                <a href="/public/home.html">Home</a>
             </li>
             <li>
-                <a href="/public/.pacific.html">Pacific</a>
+                <a href="/public/pacific.html">Pacific</a>
             </li>
             <li>
-                <a href="/public/.m10.html">M10</a>
+                <a href="/public/m10.html">M10</a>
             </li>
 
         </ul>
@@ -328,19 +330,19 @@
 
     <!-- Navbar on small screens (Hidden on medium and large screens) -->
     <div class="w3-top w3-hide-large w3-hide-medium"
-        style="margin-top: 50px; margin-left: 0px; background-color: black;">
+        style="margin-top: 50px; margin-left: 0px; background-color: black; color: snow;">
         <div class="w3-bar w3-blackw3-center w3-small">
-            <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
-            <a href="#demo" class="w3-bar-item w3-button" style="width:25% !important">DEMO</a>
-            <a href="#backtest" class="w3-bar-item w3-button" style="width:25% !important">BACKTEST</a>
-            <a href="#real" class="w3-bar-item w3-button" style="width:25% !important">REAL</a>
+            <a href="#" class="w3-bar-item w3-button" style="width:25% !important; color: snow;">HOME</a>
+            <a href="#demo" class="w3-bar-item w3-button" style="width:25% !important; color: rgb(0, 255, 0);">DEMO</a>
+            <a href="#backtest" class="w3-bar-item w3-button" style="width:25% !important; color: rgb(0, 255, 0);">BACKTEST</a>
+            <a href="#real" class="w3-bar-item w3-button" style="width:25% !important; color: rgb(255, 0, 0);">REAL</a>
         </div>
     </div>
     <div id="main">
         <div class="content">
 
 
-            <div id="home" style="padding-top: 70px;margin-bottom: -40px;">
+            <div class="w3-small w3-hide-small" id="home" style="padding-top: 70px;margin-bottom: -40px;">
                 <div class="grid-containerTitle">
                     <div style="grid-column: 1 / span 4;grid-row: 1; font-size: 42;">
                         M10 (..84)
@@ -364,6 +366,39 @@
 
                     </div>
                     <div>
+                        <a href="https://www.mql5.com/en/signals/992057?source=Site+Main"> <img
+                                src="/public/mql5Signal.jfif"
+                                style="margin: 10;padding: 10; width: 70%; height: auto;"></a>
+                        <iframe frameborder="0" width="70%" height="auto"
+                            src="https://www.mql5.com/en/signals/widget/signal/5d8h"></iframe>
+                    </div>
+                </div>
+
+            </div>
+            <div class=" w3-hide-large w3-hide-medium" id="home" style="padding-top: 70px;margin-bottom: -40px;">
+                <div class="grid-containerTitle">
+                    <div style="grid-column: 1 / span 4;grid-row: 1; font-size: 42;">
+                        M10 (..84)
+                    </div>
+                    <div style="grid-column: span 4;">
+                        <ul style="float: left;font-size: 14px;">SYMBOL:
+                            <li>EUR/USD, AUD/USD, NZD/USD, GBP/USD, EUR/JPY, USD/JPY, GBP/JPY, USD/CHF, USD/CAD, EUR/CHF
+                            </li>
+                        </ul>
+                    </div>
+                    <div style="grid-column: span 4;"></div>
+
+                    <div style="grid-column: span 4;">
+                        <a href="https://www.mql5.com/en/signals/992057?source=Site+Main"> <img
+                                src="/public/myFx.jpg"
+                                style="margin: 10;padding: 10; max-width: 70%; height: auto; background-color: rgb(56, 56, 56);"></a>
+                        <a href="https://www.myfxbook.com/members/gestra21/mt5-6061683/8378679"><img alt="widget"
+                                style="max-width:70%; height:auto;"
+                                src="https://widgets.myfxbook.com/widgets/8378679/small.jpg" /></a>
+
+
+                    </div>
+                    <div style="grid-column: span 4;">
                         <a href="https://www.mql5.com/en/signals/992057?source=Site+Main"> <img
                                 src="/public/mql5Signal.jfif"
                                 style="margin: 10;padding: 10; width: 70%; height: auto;"></a>
@@ -413,33 +448,13 @@
                         </iframe>
                     </div>
 
-                    <div style="max-width: 100%; height: auto;">
+                    <div style=" height: auto;  grid-column: span 2">
                         <a href="https://www.myfxbook.com/members/gestra21/mt5-6061683/8378679"><img alt="widget"
-                                width="100%" height="auto" style="border-radius: 5px;" alt="widget"
+                                style="max-width: 100%; height: auto; border-radius: 5px;" alt="widget"
                                 src="https://widgets.myfxbook.com/widgets/8378679/large.jpg" /></a>
                     </div>
 
-                    <div style="max-width: 100%; height: auto;">
-                        <a href="https://www.myfxbook.com/members/gestra21/mt5-6061683/8378679"><img alt="widget"
-                                width="100%" height="auto" style="border-radius: 5px;" alt="widget"
-                                src="https://widgets.myfxbook.com/widgets/8378679/large.jpg" /></a>
-                    </div>
-
-                    <div style="max-width: 100%; height: auto;">
-                        <a href="https://www.myfxbook.com/members/gestra21/mt5-6061683/8378679"><img alt="widget"
-                                width="100%" height="auto" style="border-radius: 5px;" alt="widget"
-                                src="https://widgets.myfxbook.com/widgets/8378679/large.jpg" /></a>
-                    </div>
-
-                    <div style="max-width: 100%; height: auto;">
-                        <a href="https://www.myfxbook.com/members/gestra21/mt5-6061683/8378679"><img alt="widget"
-                                width="100%" height="auto" style="border-radius: 5px;" alt="widget"
-                                src="https://widgets.myfxbook.com/widgets/8378679/large.jpg" /></a>
-                    </div>
-
-                </div>
-
-
+                                </div>
 
             </div>
 
