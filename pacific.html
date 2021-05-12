@@ -1,616 +1,154 @@
+<!DOCTYPE html>
 <html>
-
-<head>
-
-
-    <!-- Meta Tags -->
-    <title>M10</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="/public/app.css" />
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
-
-
-
-
-    <style>
-        /* Set the width of the sidebar to 120px */
-        .w3-sidebar {
-            max-width: 8%;
-            height: auto;
-            background: rgba(0, 0, 0, 0);
-            border: 1px solid white;
-        }
-
-
-        /* Resets */
-        body,
-        p,
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6,
-        div,
-        span,
-        header,
-        footer,
-        img,
-        a,
-        a:hover,
-        a:active,
-        a:visited,
-        table,
-        tr,
-        td,
-        th,
-        form,
-        input,
-        button,
-        select,
-        textarea {
-            line-height: 100%;
-            padding: 0;
-            margin: 0;
-            margin-top: 1px;
-            font-family: sans-serif;
-            font-size: 12px;
-            font-weight: normal;
-            text-decoration: none;
-            color: #1a1a1a;
-            border-width: 0;
-        }
-
-        .clear {
-            float: none;
-            width: 100%;
-            height: 1px;
-        }
-
-        /* Main color palette */
-        .header {
-            background-color: rgb(0, 0, 0);
-            border-width: 0 0 1px 0;
-            border-style: solid;
-            border-color: #fff;
-            box-shadow: 0 -25px 11px 20px rgb(255, 255, 255);
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 50px;
-            max-width: 100%;
-            padding: 5px 15px;
-            /*min-width: 1200px;*/
-        }
-
-        .header ul {
-            list-style-type: none;
-            text-align: right;
-            padding: 0 5px;
-            float: right;
-        }
-
-        .header ul li {
-            display: inline-block;
-            padding: 5px 5px 0 50px;
-        }
-
-        .header ul li a {
-            text-transform: uppercase;
-            font-weight: 900 !important;
-            font-size: 11px;
-            color: rgb(247, 241, 241);
-        }
-
-        .header ul li.loggedIn {
-            display: none;
-        }
-
-        body {
-            background-color: rgb(15, 15, 15)
-        }
-
-        body.loggedIn .header ul li.loggedIn {
-            display: inline-block;
-        }
-
-        body.loggedIn .header ul li.loggedOut {
-            display: none;
-        }
-
-        .header .logo {
-            text-align: left;
-            padding: 0 0 0 5px;
-            float: left;
-        }
-
-        .header .logo img {
-            width: 10px;
-        }
-
-        .content {
-            background-color: #00000000;
-            margin-top: 0px;
-            max-width: 80%;
-            margin-left: 10%;
-            margin-right: 5%;
-            border-radius: 20px;
-        }
-
-        .mining {
-            margin-top: 10px;
-            width: 100%;
-            margin: 0px auto;
-            background-color: #b33f3f59;
-        }
-
-        .footer {
-            background-color: rgb(0, 0, 0);
-            padding: 10px 0;
-            text-align: center;
-            border-width: 1px 0 0 0;
-            border-color: #fff;
-            border-style: solid;
-            position: fixed;
-            bottom: 0;
-            padding: 5px 0;
-            max-width: 100%;
-        }
-
-        .grid-containerTitle {
-            display: grid;
-            grid-template-columns: auto 20% 20% 20%;
-            grid-template-rows: auto auto auto;
-            grid-gap: 5px;
-            background-color: #000000;
-            padding: 5px;
-            border-radius: 10px;
-            width: 100%;
-            border: 1px solid white;
-            padding: 10px;
-            /*box-shadow: 5px 5px 10px 0px #ffffff;*/
-        }
-
-
-        .grid-containerTitle>div {
-            background-color: rgb(255, 255, 255);
-            text-align: center;
-            padding: 10px 10px;
-            font-size: 24px;
-            color: rgb(0, 0, 0);
-            /*margin: 10px;*/
-            border-radius: 10px;
-            border: 0px solid;
-            padding: 10px;
-            /*box-shadow: 5px 5px 10px 0px #d6d6d6;*/
-        }
-
-        .grid-containerMyFx {
-            width: 100%;
-            display: grid;
-            grid-template-columns: 50% 50%;
-            grid-template-rows: auto auto;
-            /*grid-template-rows: 100%;*/
-            grid-gap: 10px;
-            background-color: #ffffff;
-            border-radius: 10px;
-            padding: 5px;
-        }
-
-        .grid-containerMyFx>div {
-            background-color: rgba(255, 255, 255, 1);
-            text-align: center;
-            width: 100%;
-            padding: 0px;
-            font-size: 30px;
-            color: rgb(255, 255, 255);
-            border-radius: 10px;
-        }
-
-        .grid-container {
-            display: grid;
-            grid-template-columns: auto auto auto auto;
-            grid-template-rows: auto;
-            grid-gap: 5px;
-            background-color: #000000;
-            padding: 0px;
-            border-radius: 10px;
-            max-width: 100%;
-            border: 1px solid white;
-            /*box-shadow: 5px 5px 10px 0px #5f5e5e;*/
-
-        }
-
-        .grid-container>div {
-            background-color: rgb(0, 0, 0);
-            text-align: center;
-            padding: 10px 10px;
-            margin: 0px;
-            font-size: 30px;
-            color: rgb(255, 255, 255);
-            border-radius: 10px;
-            border: 0px solid;
-            /*box-shadow: 3px 3px 8px 0px #ffffff;*/
-            min-width: 15%;
-        }
-
-        .item1 {
-            grid-column: 1 / span 2;
-            grid-row: 1;
-        }
-
-        .item2 {
-            grid-column: 3;
-            grid-row: 1 / span 2;
-        }
-
-        .item5 {
-            grid-column: 1 / span 3;
-            grid-row: 3;
-        }
-
-        .myFxchart {
-
-            grid-column: 3;
-            grid-row: 2 / span 2;
-        }
-    </style>
-</head>
-<header>
-    <div class="header" style=" width: 100%;">
-        <!-- Logo -->
-        <a class="logo" href="/">
-            <!--  <img src="public/logo.png" alt="Logo" />  -->
-        </a>
-        <!--   <ul class="menu" style="float: left; margin-top: 10px; margin-left: 10px; padding: 0px;">
-            <li> <span style="font-size:20px;cursor:pointer;" onclick="openNav()">&#9776;</span>
-            </li>
-        </ul>
-         Navigation -->
-        <ul class="menu" style="float: left;">
-            <li>
-                <a href="/public/home.html">Home</a>
-            </li>
-            <li>
-                <a href="/public/pacific.html">Pacific</a>
-            </li>
-            <li>
-                <a href="/public/m10.html">M10</a>
-            </li>
-
-        </ul>
-    </div>
-    <!--
-    <div id="sidenav" class="sidenav">
-        <a href="javascript:void(0)" onclick="closeNav()">&times;</a>
-        <a href="/mining/index?template=dev_homepage">HOME</a>
-        <a href="#"></a>
-        <a href="#">MINING</a>
-        <a href="/mining/index?template=dev_vbtBeta">- ViaBTC</a>
-        <a href="/mining/index?template=dev_spBeta">- SlushPool</a>
-        <a href="#"></a>
-        <a href="/">FX</a>
-        <a href="/mining/index?template=dev_fx2Beta">- Major</a>
-    </div>
--->
-
-</header>
+<meta charset="UTF-8">
+<title>gestra21</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 <body>
-    <!-- Icon Bar (Sidebar - hidden on small screens) -->
-    <div class="w3-sidebar w3-small w3-hide-small  w3-hide-medium w3-center w3-black"
-        style="border-radius: 10px;margin-top: 70px; margin-left: 25px; background-color: rgba(0,0,0,1); color: snow;">
-        <!-- Avatar image in top left corner -->
-        <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black" style="margin-top: 0px; ">
-            <i class="fa fa-line-chart w3-large"></i>
-            <p style=" color: snow;">STATS</p>
-        </a>
-        <a href="#chart" class="w3-bar-item w3-button w3-padding-large w3-black" style="margin-top: 0px; ">
-            <i class="fa fa-bar-chart w3-large"></i>
-            <p style=" color: snow;">CHART</p>
-        </a>
-        <a href="#demo" class="w3-bar-item w3-button w3-padding-large">
-            <i class="	fa fa-area-chart w3-large" style="color:rgb(253, 253, 253)"></i>
-            <p style=" color: snow;">PRICE & <BR>ORDERS</p>
-        </a>
-        <a href="#backtest" class="w3-bar-item w3-button w3-padding-large">
-            <i class="fa fa-database w3-large" style="color:rgb(255, 255, 255)"></i>
-            <p style=" color: snow;">BACKTEST</p>
-        </a>
-        <a href="#real" class="w3-bar-item w3-button w3-padding-large">
-            <i class="	fa fa-pie-chart w3-large" style="color:rgb(255, 0, 0)"></i>
-            <p style=" color: snow;">REAL</p>
-        </a>
-    </div>
 
-
-
-    <!-- Navbar on small screens (Hidden on medium and large screens) -->
-    <div class="w3-top w3-hide-large" style="margin-top: 50px; margin-left: 0px; background-color: black; color: snow;">
-        <div class="w3-bar w3-blackw3-center w3-small">
-            <a href="#" class="w3-bar-item w3-button" style="width:20% !important; color: snow;">HOME</a>
-            <a href="#chart" class="w3-bar-item w3-button"
-                style="width:20% !important; color: rgb(0, 255, 0);">CHART</a>
-            <a href="#demo" class="w3-bar-item w3-button"
-                style="width:20% !important; color: rgb(0, 255, 0);">PRICE&ORDERS</a>
-            <a href="#backtest" class="w3-bar-item w3-button"
-                style="width:20% !important; color: rgb(0, 255, 0);">BACKTEST</a>
-            <a href="#real" class="w3-bar-item w3-button" style="width:20% !important; color: rgb(255, 0, 0);">REAL</a>
+    <!-- Navbar (Sits on top) -->
+    <div class="w3-top w3-bar w3-white w3-wide w3-padding w3-card">
+        <a href="#home" class="w3-bar-item w3-button"><b>GESTRA</b> Markets</a>
+        <!-- Float links to the right. Hide them on small screens -->
+        <div class="w3-right w3-hide-small">
+            <a href="#signal" class="w3-bar-item w3-button">Signal</a>
+            <a href="#projects" class="w3-bar-item w3-button">Projects</a>
+            <a href="#about" class="w3-bar-item w3-button">About</a>
+            <a href="#contact" class="w3-bar-item w3-button">Contact</a>
         </div>
     </div>
-    <div id="main">
-        <div class="content">
 
+    <!-- Page Start -->
+    <div id="home" class="w3-content" style="max-width:1564px">
 
-            <div id="home" style="padding-top: 70px; margin-bottom: -40px;">
+        <!-- Image -->
+        <div class="w3-display-container w3-content w3-center" style="max-width:1500px;">
+            <img class="w3-image w3-padding-64" src="/public2/logo.jpg" alt="Architecture" width="20%">
+        </div>
 
-                <div class="grid-container">
-                    <div class="w3-hide-large" style="grid-column: span 4; max-width: 100%;">
-                        <a href="https://www.myfxbook.com/members/gestra21/mt5-6061683/8378678"><img alt="widget"
-                                src="https://widgets.myfxbook.com/widget?id=8378678&type=1&color=black" /></a>
-                    </div>
-                    <div class="w3-hide-large" style="grid-column: span 4; max-width: 100%;">
-                        <a href="https://www.myfxbook.com/members/gestra21/mt5-6061683/8378678"><img
-                                style="border-radius: 10px;" alt="widget"
-                                src="https://widgets.myfxbook.com/custom-widget?id=8378678&width=340&height=210&bart=0&linet=1&magic=-1&title=Mt5-6061683&titles=12&bgColor=000000&gridColor=bdbdbd&lineColor=0024ff&barColor=4a63fb&bar1Color=4a63fb&fontColor=ffffff&chartbgc=3a3a3a&equityColor=eff45a" /></a>
-                    </div>
-                    <div class="w3-hide-large" style="grid-column: span 4; max-width: 100%;">
-                        <a href="https://www.myfxbook.com/members/gestra21/mt5-6061683/8378678"><img
-                                style="border-radius: 10px;" alt="widget"
-                                src="https://widgets.myfxbook.com/custom-widget?id=8378678&width=340&height=210&bart=0&linet=0&magic=-1&title=Mt5-6061683&titles=12&bgColor=000000&gridColor=bdbdbd&lineColor=0024ff&barColor=4a63fb&bar1Color=4a63fb&fontColor=ffffff&chartbgc=3a3a3a&equityColor=eff45a" /></a>
-                    </div>
-                    <div class="w3-hide-large" style="grid-column: span 4; max-width: 100%;">
-                        <a href="https://www.myfxbook.com/members/gestra21/mt5-6061683/8378678"><img
-                                style="border-radius: 10px;" alt="widget"
-                                src="https://widgets.myfxbook.com/custom-widget?id=8378678&width=340&height=210&bart=0&linet=5&magic=-1&title=Mt5-6061683&titles=12&bgColor=000000&gridColor=bdbdbd&lineColor=0024ff&barColor=4a63fb&bar1Color=4a63fb&fontColor=ffffff&chartbgc=3a3a3a&equityColor=eff45a" /></a>
-                    </div>
-                    <div class="w3-hide-large" style="grid-column: span 4; max-width: 100%;">
-                        <a href="https://www.myfxbook.com/members/gestra21/mt5-6061683/8378678"><img
-                                style="border-radius: 10px;" alt="widget"
-                                src="https://widgets.myfxbook.com/custom-widget?id=8378678&width=340&height=210&bart=1&linet=6&magic=-1&title=Mt5-6061683&titles=12&bgColor=000000&gridColor=bdbdbd&lineColor=0024ff&barColor=4a63fb&bar1Color=4a63fb&fontColor=ffffff&chartbgc=3a3a3a&equityColor=eff45a" /></a>
-                    </div>
+        <!-- Signal -->
+        <div id="signal" class="w3-container">
+            <h2 class="w3-border-bottom w3-border-light-grey">Signal</h2>
+        </div>
 
+        <div class="w3-row-padding">
+
+            <div class="w3-col l3 m6 w3-margin-bottom ">
+                <div class="w3-display-container  w3-bar w3-white w3-wide w3-padding w3-card">
+                    <div class="w3-padding">M10</div>
                     
-                    <div class="w3-hide-small w3-hide-medium" style="grid-column: span 4; max-width: 100%;">
-                        <a href="https://www.myfxbook.com/members/gestra21/mt5-6061683/8378678"><img alt="widget"
-                                src="https://widgets.myfxbook.com/widget?id=8378678&type=2&color=black" /></a>
+                    <div class="w3-padding">
+                        <iframe frameborder="0" width="100%" height="auto" src="https://www.mql5.com/en/signals/widget/signal/5d8h">                    
+                        </iframe>
                     </div>
-                    <div class="w3-hide-small w3-hide-medium" style="grid-column: span 1; max-width: 100%;">
-                        <a href="https://www.myfxbook.com/members/gestra21/mt5-6061683/8378678"><img
-                                style="border-radius: 10px;" alt="widget"
-                                src="https://widgets.myfxbook.com/custom-widget?id=8378678&width=340&height=210&bart=0&linet=1&magic=-1&title=Mt5-6061683&titles=12&bgColor=000000&gridColor=bdbdbd&lineColor=0024ff&barColor=4a63fb&bar1Color=4a63fb&fontColor=ffffff&chartbgc=3a3a3a&equityColor=eff45a" /></a>
-                    </div>
-                    <div class="w3-hide-small w3-hide-medium" style="grid-column: span 1; max-width: 100%;">
-                        <a href="https://www.myfxbook.com/members/gestra21/mt5-6061683/8378678"><img
-                                style="border-radius: 10px;" alt="widget"
-                                src="https://widgets.myfxbook.com/custom-widget?id=8378678&width=340&height=210&bart=0&linet=0&magic=-1&title=Mt5-6061683&titles=12&bgColor=000000&gridColor=bdbdbd&lineColor=0024ff&barColor=4a63fb&bar1Color=4a63fb&fontColor=ffffff&chartbgc=3a3a3a&equityColor=eff45a" /></a>
-                    </div>
-                    <div class="w3-hide-small w3-hide-medium" style="grid-column: span 1; max-width: 100%;">
-                        <a href="https://www.myfxbook.com/members/gestra21/mt5-6061683/8378678"><img
-                                style="border-radius: 10px;" alt="widget"
-                                src="https://widgets.myfxbook.com/custom-widget?id=8378678&width=340&height=210&bart=0&linet=5&magic=-1&title=Mt5-6061683&titles=12&bgColor=000000&gridColor=bdbdbd&lineColor=0024ff&barColor=4a63fb&bar1Color=4a63fb&fontColor=ffffff&chartbgc=3a3a3a&equityColor=eff45a" /></a>
-                    </div>
-                    <div class="w3-hide-small w3-hide-medium" style="grid-column: span 1; max-width: 100%;">
-                        <a href="https://www.myfxbook.com/members/gestra21/mt5-6061683/8378678"><img
-                                style="border-radius: 10px;" alt="widget"
-                                src="https://widgets.myfxbook.com/custom-widget?id=8378678&width=340&height=210&bart=1&linet=6&magic=-1&title=Mt5-6061683&titles=12&bgColor=000000&gridColor=bdbdbd&lineColor=0024ff&barColor=4a63fb&bar1Color=4a63fb&fontColor=ffffff&chartbgc=3a3a3a&equityColor=eff45a" /></a>
+                    <div class="w3-padding">
+                        <a href="https://www.myfxbook.com/members/gestra21/mt5-6061683/8378678">
+                        <img style="width: 100%;" alt="widget" src="https://widgets.myfxbook.com/widgets/8378678/large.jpg"/></a>
                     </div>
                 </div>
             </div>
 
-
-            <div id="chart" style="padding-top: 70px; margin-bottom: -40px;">
-                <div class="grid-container">
-                    <div style="grid-column: 1 / span 4;grid-row: 1; font-size:18px; color: black;">
-                        <!-- myfxbook.com browser widget - Start -->
-                        <div
-                            style="background-color: rgb(0, 0, 0); overflow: hidden;  max-width: 100%; border: solid rgba(255, 255, 255, 0); border-radius: 10px;">
-                            <script style="align-items: center;" type="text/javascript"
-                                src="https://widgets.myfxbook.com/scripts/fxBrowser.js?oid=8378678"></script>
-                        </div>
-                        <div style="font-size: 10px">
-                            © Powered by <a href='https://www.myfxbook.com' class='myfxbookLink' target='_self'
-                                rel='noopener noreferrer'><strong>Myfxbook.com</strong></a>
-                        </div>
-                        <!-- myfxbook.com browser widget - End -->
-
+            <div class="w3-col l3 m6 w3-margin-bottom">
+                <div class="w3-display-container  w3-bar w3-white w3-wide w3-padding w3-card">
+                    <div class="w3-padding">Pacific</div>
+                    
+                    <div class="w3-padding">
+                        <iframe frameborder="0" width="100%" height="auto" src="https://www.mql5.com/en/signals/widget/signal/5dcf">                    
+                        </iframe>
                     </div>
-
+                    <div class="w3-padding">
+                        <a href="https://www.myfxbook.com/members/gestra21/mt5-6061684/8378679">
+                        <img style="width: 100%;" alt="widget" src="https://widgets.myfxbook.com/widgets/8378679/large.jpg"/></a>
+                    </div>
                 </div>
             </div>
 
-            <div id="home" style="padding-top: 70px;margin-bottom: -40px;">
-                <div class="grid-containerTitle w3-hide-small w3-hide-medium">
-                    <div style="grid-column: 1 / span 4;grid-row: 1; font-size: 42;">
-                    </div>
-                    <div>
-                        <ul style="float: left;font-size: 14px;">SYMBOL:
-                            <li>EUR/USD, AUD/USD, NZD/USD, GBP/USD, EUR/JPY, USD/JPY, GBP/JPY, USD/CHF, USD/CAD, EUR/CHF
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <a
-                            href="https://trade.swissquote.ch/signup/public/form/full/fx/com/individual?lang=it&utm_source=google&utm_medium=cpc&utm_campaign=brand&utm_content=110706157385&gclid=CjwKCAjwm7mEBhBsEiwA_of-TOdRD6SLhYQ8TIbPfvAcmKVm2SLhrEOWnk4IoZRUeTeDnpspbo9oqxoCLpkQAvD_BwE&trackPageId=dmaptl0thknw479da4es3vcsc*5689526042&cookieId=undefined&sessionId=dmaptl0thknw479da4es3vcsc&_ga=2.248127495.1627996630.1619941694-1731766059.1619941694&_gac=1.49555028.1619951470.CjwKCAjwm7mEBhBsEiwA_of-TOdRD6SLhYQ8TIbPfvAcmKVm2SLhrEOWnk4IoZRUeTeDnpspbo9oqxoCLpkQAvD_BwE#full/fx/com/individual/step1">
+        </div>
 
-                            <img src="/public/sqLogo.svg"
-                                style="border-radius: 10px;margin: 0;padding: 0; max-width: 70%; height: auto; "></a>
-                        <a href="https://www.mql5.com/en/signals/992057?source=Site+Main"> <img
-                                src="/public/mql5Signal.jpg"
-                                style="z-index: 0; background-image:  #3a3a3a; border-radius: 10px;margin: 0;padding-bottom: 15px; width: 70%; height: auto;"></a>
+        <!-- Projects -->
+        <div id="projects" class="w3-container w3-padding-32">
+            <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Projects</h2>
+        </div>
 
-                        <a href="https://www.myfxbook.com/members/gestra21/mt5-6061683/8378678"><img
-                                src="/public/myFx.jpg"
-                                style="border-radius: 10px;margin: 0;padding: 0; max-width: 70%; height: auto; background-color: rgb(56, 56, 56);"></a>
+        <div class="w3-row-padding">
 
-                    </div>
-
-                    <div>
-                        <a href="https://www.myfxbook.com/members/gestra21/mt5-6061683/8378678"><img alt="widget"
-                                style="border-radius: 10px; max-width:70%; height:auto;"
-                                src="https://widgets.myfxbook.com/widgets/8378678/small.jpg" /></a>
-
-
-                    </div>
-                    <div>
-                        <iframe style="border-radius: 10px;" frameborder="0" width="70%" height="auto"
-                            src="https://www.mql5.com/en/signals/widget/signal/5dcf"></iframe>
-                    </div>
+            <div class="w3-col l3 m6 w3-margin-bottom">
+                <div class="w3-display-container">
+                    <div class="w3-display-topleft w3-black w3-padding">Commodities</div>
+                    <img src="/w3images/house5.jpg" alt="House" style="width:100%">
                 </div>
-
-            </div>
-            <div id="home" style="padding-top: 70px;margin-bottom: -40px;">
-                <div class="grid-containerTitle w3-hide-large">
-                    <div style="grid-column: 1 / span 4;grid-row: 1; font-size: 42;">
-                    </div>
-                    <div style="grid-column:  span 4;">
-                        <ul style="float: left;font-size: 14px;">SYMBOL:
-                            <li>EUR/USD, AUD/USD, NZD/USD, GBP/USD, EUR/JPY, USD/JPY, GBP/JPY, USD/CHF, USD/CAD, EUR/CHF
-                            </li>
-                        </ul>
-                    </div>
-                    <div style="grid-column:  span 4;">
-                        <a
-                            href="https://trade.swissquote.ch/signup/public/form/full/fx/com/individual?lang=it&utm_source=google&utm_medium=cpc&utm_campaign=brand&utm_content=110706157385&gclid=CjwKCAjwm7mEBhBsEiwA_of-TOdRD6SLhYQ8TIbPfvAcmKVm2SLhrEOWnk4IoZRUeTeDnpspbo9oqxoCLpkQAvD_BwE&trackPageId=dmaptl0thknw479da4es3vcsc*5689526042&cookieId=undefined&sessionId=dmaptl0thknw479da4es3vcsc&_ga=2.248127495.1627996630.1619941694-1731766059.1619941694&_gac=1.49555028.1619951470.CjwKCAjwm7mEBhBsEiwA_of-TOdRD6SLhYQ8TIbPfvAcmKVm2SLhrEOWnk4IoZRUeTeDnpspbo9oqxoCLpkQAvD_BwE#full/fx/com/individual/step1">
-
-                            <img src="/public/sqLogo.svg"
-                                style="border-radius: 10px;margin: 0;padding: 0; max-width: 70%; height: auto; "></a>
-                        <a href="https://www.mql5.com/en/signals/992057?source=Site+Main"> <img
-                                src="/public/mql5Signal.jpg"
-                                style="z-index: 0; background-image:  #3a3a3a; border-radius: 10px;margin: 0;padding-bottom: 15px; width: 70%; height: auto;"></a>
-
-                        <a href="https://www.myfxbook.com/members/gestra21/mt5-6061683/8378678"><img
-                                src="/public/myFx.jpg"
-                                style="border-radius: 10px;margin: 0;padding: 0; max-width: 70%; height: auto; background-color: rgb(56, 56, 56);"></a>
-
-                    </div>
-
-                    <div style="grid-column:  span 4;">
-                        <a href="https://www.myfxbook.com/members/gestra21/mt5-6061683/8378678"><img alt="widget"
-                                style="border-radius: 10px; max-width:70%; height:auto;"
-                                src="https://widgets.myfxbook.com/widgets/8378678/small.jpg" /></a>
-
-
-                    </div>
-                    <div style="grid-column:  span 4;">
-                        <iframe style="border-radius: 10px;" frameborder="0" width="70%" height="auto"
-                            src="https://www.mql5.com/en/signals/widget/signal/5dcf"></iframe>
-                    </div>
-                </div>
-
             </div>
 
-
-            <div id="demo" style="padding-top: 70px; margin-bottom: -40px;">
-                <div class="grid-container">
-                    <div style="grid-column: 1 / span 4;font-size:18px; color: black; width: 100%; height: 100%;">
-                        <div
-                            style="background-color: white;  max-width: 100%; border: solid rgb(255, 255, 255); border-radius: 10px;">
-
-                            <iframe
-                                src="https://widgets.myfxbook.com/widgets/quotes-rate.html?symbols=11,1,28,7,2,4,14,3,29,5&columns=1,2,3,4,5,6"
-                                width="100%" height="100%" frameborder="0"></iframe>
-                        </div>
-
-                    </div>
-                    <div style="grid-column: 1 / span 4;font-size:18px; color: black; width: 100%; height: auto;">
-                        <!-- myfxbook.com browser widget - Start -->
-                        <div
-                            style="background-color: white; overflow: hidden;  max-width: 100%; border: solid rgb(255, 255, 255); border-radius: 10px;">
-
-                            <script class="powered" type="text/javascript"
-                                src="https://widgets.myfxbook.com/scripts/fxOpenTrades.js?oid=8378678&link=1"
-                                width="100%" height="auto"></script>
-                        </div>
-
-                    </div>
-
+            <div class="w3-col l3 m6 w3-margin-bottom">
+                <div class="w3-display-container">
+                    <div class="w3-display-topleft w3-black w3-padding">Indices</div>
+                    <img src="/w3images/house2.jpg" alt="House" style="width:100%">
                 </div>
-
             </div>
 
-
-
-            <div id="backtest" style="padding-top: 70px; margin-bottom: -40px;">
-                <div class="grid-container">
-                    <div
-                        style="height:50px;grid-column: 1 / span 3;grid-row: 1; font-size:24px; color: rgb(255, 255, 255);">
-                        Backtest result - 01.01.2007 / 30.04.2021
-                    </div>
-                    <div style="height:800px;grid-column: 1 / span 3;grid-row: 2/span 3;">
-                        <div class="tab">
-                            <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Leverage
-                                max3</button>
-                            <button class="tablinks" onclick="openCity(event, 'Paris')">Leverage max5</button>
-                            <button class="tablinks" onclick="openCity(event, 'Tokyo')">Leverage max8</button>
-                        </div>
-
-                        <div id="London" class="tabcontent">
-                            <img src="/public/#">
-                        </div>
-
-                        <div id="Paris" class="tabcontent">
-                            <img src="/public/#">
-                        </div>
-
-                        <div id="Tokyo" class="tabcontent">
-                            <img src="/public/#">
-                        </div>
-                    </div>
+            <div class="w3-col l3 m6 w3-margin-bottom">
+                <div class="w3-display-container">
+                    <div class="w3-display-topleft w3-black w3-padding">Stock's</div>
+                    <img src="/w3images/house3.jpg" alt="House" style="width:100%">
                 </div>
+            </div>
+
+        </div>
+
+        <!-- About -->
+        <div id="about" class="w3-container w3-padding-32">
+            <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">About</h2>
+            <p>Info gestra app
+            </p>
+        </div>
+
+        <div class="w3-row-padding w3-grayscale">
+
+            <div class="w3-col l3 m6 w3-margin-bottom">
+                <img src="/w3images/team2.jpg" alt="nf" style="width:100%">
+                <h3>NF</h3>
+                <p class="w3-opacity">CEO & Founder</p>
+                <p>...................................</p>
+                <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
+            </div>
+
+            <div class="w3-col l3 m6 w3-margin-bottom">
+                <img src="/w3images/team1.jpg" alt="xy" style="width:100%">
+                <h3>....</h3>
+                <p class="w3-opacity">Architect</p>
+                <p>...................................</p>
+                <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
             </div>
 
 
         </div>
 
-        <script type="text/javascript">showMarketsWidget()</script>
+        <!-- Contact Section -->
+        <div id="contact" class="w3-container w3-padding-top-32">
 
-        <script type="text/javascript">showOpenTradesWidget()</script>
+            <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Contact</h2>
+            <p>Lets get in touch and talk about your next project</p>
 
+            <form action="/action_page.php" target="_blank">
+                <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+                <input class="w3-input w3-section w3-border" type="text" placeholder="Email" required name="Email">
+                <input class="w3-input w3-section w3-border" type="text" placeholder="Subject" required name="Subject">
+                <input class="w3-input w3-section w3-border" type="text" placeholder="Comment" required name="Comment">
+                <button class="w3-button w3-black w3-section" type="submit">
+                    <i class="fa fa-paper-plane"></i> SEND MESSAGE
+                </button>
+            </form>
 
-        <script>
-            function openCity(evt, cityName) {
-                var i, tabcontent, tablinks;
-                tabcontent = document.getElementsByClassName("tabcontent");
-                for (i = 0; i < tabcontent.length; i++) {
-                    tabcontent[i].style.display = "none";
-                }
-                tablinks = document.getElementsByClassName("tablinks");
-                for (i = 0; i < tablinks.length; i++) {
-                    tablinks[i].className = tablinks[i].className.replace(" active", "");
-                }
-                document.getElementById(cityName).style.display = "block";
-                evt.currentTarget.className += " active";
-            }
+            <img src="/w3images/map.jpg" class="w3-image" style="width:100%">
 
-            // Get the element with id="defaultOpen" and click on it
-            document.getElementById("defaultOpen").click();
-        </script>
+            <footer class="w3-center w3-black w3-panel w3-padding-16">
+            </footer>
+        </div>
 
-
-        <script>
-            function openNav() {
-                document.getElementById("sidenav").style.width = "200px";
-                document.getElementById("main").style.marginLeft = "100px";
-            }
-
-            function closeNav() {
-                document.getElementById("sidenav").style.width = "0";
-                document.getElementById("main").style.marginLeft = "0";
-            }
-        </script>
-    </div>
-    <!-- Footer -->
-    <div class="footer">
-        <div class="copyright">@ Copyright Neil Filippelli 2021 | All Rights Reserved</div>
+        <!-- End page content -->
     </div>
 
 </body>
 
 </html>
-    
