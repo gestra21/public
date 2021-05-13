@@ -1,90 +1,161 @@
+<!DOCTYPE html>
 <html>
-
-<head>
-
-    <!-- General Settings -->
-    <meta charset="utf-8">
-    <meta http-equiv="content-language" content="en-us">
-    <base href="{global.baseUrl}" />
-
-    <!-- Meta Tags -->
-    <title>Home</title>
-    <meta name="description" content="{head.description}">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Static Assets -->
-
-    <link rel="stylesheet" type="text/css" href="/public/app.css" />
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-
-</head>
+<meta charset="UTF-8">
+<title>gestra21</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 <body>
-    <!-- Header -->
-    <div class="header">
-        <!-- Logo -->
-        <a class="logo" href="/">
-            <!--  <img src="public/logo.png" alt="Logo" />  -->
-        </a>
-        <!-- Navigation -->
-        <ul class="menu" style="float:left;">
-            <li>
-                <a href="/public/pacific.html">Pacific</a>
-            </li>
-            <li>
-                <a href="/public/m10.html">M10</a>
-            </li>
-            <li>
-                <a href="/public/home.html">Home</a>
-            </li>
 
+    <!-- Navbar (Sits on top) -->
+    <div class="w3-top w3-bar w3-white w3-wide w3-padding w3-card">
+        <a href="#home" class="w3-bar-item w3-button"><b>GESTRA</b> Markets</a>
+        <!-- Float links to the right. Hide them on small screens -->
+        <div class="w3-right w3-hide-small">
+            <a href="#signal" class="w3-bar-item w3-button">Signal</a>
+            <a href="#projects" class="w3-bar-item w3-button">Projects</a>
+            <a href="#about" class="w3-bar-item w3-button">About</a>
+            <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+        </div>
+    </div>
 
-        </ul>
-    </div>
-    <!--
-    <div id="sidenav" class="sidenav">
-        <a href="javascript:void(0)" onclick="closeNav()">&times;</a>
-        <a href="/mining/index?template=dev_homepage">HOME</a>
-        <a href="#"></a>
-        <a href="#">MINING</a>
-        <a href="/mining/index?template=dev_vbtBeta">- ViaBTC</a>
-        <a href="/mining/index?template=dev_spBeta">- SlushPool</a>
-        <a href="#"></a>
-        <a href="/">FX</a>
-        <a href="/mining/index?template=dev_fx2Beta">- Major</a>
-    </div>
+    <!-- Page Start -->
+    <div id="home" class="w3-content" style="max-width:1564px">
+
+        <!-- Image 
+        <div class="w3-display-container w3-content w3-center" style="max-width:1500px;">
+            <img class="w3-image w3-padding-64"  style="transform:rotate(270deg);" src="/public/logo.jpg" alt="Architecture" width="20%">
+        </div>
+        -->        
+
+        <!-- Signal -->
+        <div id="signal" class="w3-container">
+            <h2 class="w3-border-bottom w3-border-light-grey">Signal</h2>
+        </div>
+
+        <div class="w3-row-padding">
+
+            <div class="w3-col l3 m6 w3-margin-bottom ">
+                <div class="w3-display-container  w3-bar w3-white w3-wide w3-padding w3-card">
+                    <div class="w3-padding">Pacific</div>
+                       <div class="w3-padding w3-center">
+               <a href="https://www.myfxbook.com/members/gestra21/mt5-6061683/8378678"><img alt="widget" src="https://widgets.myfxbook.com/widget?id=8378678&type=1&color=black"/></a>
+                         </div>
+                     <div class="w3-padding">
+                    
+                        <iframe frameborder="0" width="100%" height="auto" src="https://www.mql5.com/en/signals/widget/signal/5dcf">                    
+                        </iframe>
+                    </div>
+                    <div class="w3-padding">
+                        <a href="https://www.myfxbook.com/members/gestra21/mt5-6061683/8378678">
+                        <img style="width: 100%;" alt="widget" src="https://widgets.myfxbook.com/widgets/8378678/large.jpg"/></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-col l3 m6 w3-margin-bottom">
+                <div class="w3-display-container  w3-bar w3-white w3-wide w3-padding w3-card">
+                    <div class="w3-padding">M10</div>
+                                     <div class="w3-padding w3-center">
+               <a href="https://www.myfxbook.com/members/gestra21/mt5-6061684/8378679"><img alt="widget" src="https://widgets.myfxbook.com/widget?id=8378679&type=1&color=black"/></a>
+                         </div>
     
-    <!-- Page-Specific Content -->
-    <div id="main">
-        <div class="content">
-            <div style="margin-top: 75px;">
-<!--<img src="fiboN.jpg">-->
-</div>
+                    <div class="w3-padding">   
+                        <iframe frameborder="0" width="100%" height="auto" src="https://www.mql5.com/en/signals/widget/signal/5d8h">                    
+                        </iframe>
+                    </div>
+                    <div class="w3-padding">
+                        <a href="https://www.myfxbook.com/members/gestra21/mt5-6061684/8378679">
+                        <img style="width: 100%;" alt="widget" src="https://widgets.myfxbook.com/widgets/8378679/large.jpg"/></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Projects -->
+        <div id="projects" class="w3-container w3-padding-32">
+            <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Projects</h2>
+        </div>
+
+        <div class="w3-row-padding">
+
+            <div class="w3-col l3 m6 w3-margin-bottom">
+                <div class="w3-display-container">
+                    <div class="w3-display-topleft w3-black w3-padding">Commodities</div>
+                    <img src="/w3images/house5.jpg" alt="House" style="width:100%">
+                </div>
+            </div>
+
+            <div class="w3-col l3 m6 w3-margin-bottom">
+                <div class="w3-display-container">
+                    <div class="w3-display-topleft w3-black w3-padding">Indices</div>
+                    <img src="/w3images/house2.jpg" alt="House" style="width:100%">
+                </div>
+            </div>
+
+            <div class="w3-col l3 m6 w3-margin-bottom">
+                <div class="w3-display-container">
+                    <div class="w3-display-topleft w3-black w3-padding">Stock's</div>
+                    <img src="/w3images/house3.jpg" alt="House" style="width:100%">
+                </div>
+            </div>
+
+        </div>
+
+        <!-- About -->
+        <div id="about" class="w3-container w3-padding-32">
+            <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">About</h2>
+            <p>Info gestra app
+            </p>
+        </div>
+
+        <div class="w3-row-padding w3-grayscale">
+
+            <div class="w3-col l3 m6 w3-margin-bottom">
+                <img src="/w3images/team2.jpg" alt="nf" style="width:100%">
+                <h3>NF</h3>
+                <p class="w3-opacity">CEO & Founder</p>
+                <p>...................................</p>
+                <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
+            </div>
+
+            <div class="w3-col l3 m6 w3-margin-bottom">
+                <img src="/w3images/team1.jpg" alt="xy" style="width:100%">
+                <h3>....</h3>
+                <p class="w3-opacity">Architect</p>
+                <p>...................................</p>
+                <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
+            </div>
 
 
         </div>
-        <script>
-            function openNav() {
-                document.getElementById("sidenav").style.width = "200px";
-                document.getElementById("main").style.marginLeft = "100px";
-            }
 
-            function closeNav() {
-                document.getElementById("sidenav").style.width = "0";
-                document.getElementById("main").style.marginLeft = "0";
-            }
-        </script>
-    </div>
-    <!-- Footer -->
-    <div class="footer">
-        <div class="copyright">@ Copyright Neil Filippelli 2021 | All Rights Reserved</div>
+        <!-- Contact Section -->
+        <div id="contact" class="w3-container w3-padding-top-32">
+
+            <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Contact</h2>
+            <p>Lets get in touch and talk about your next project</p>
+
+            <form action="/action_page.php" target="_blank">
+                <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+                <input class="w3-input w3-section w3-border" type="text" placeholder="Email" required name="Email">
+                <input class="w3-input w3-section w3-border" type="text" placeholder="Subject" required name="Subject">
+                <input class="w3-input w3-section w3-border" type="text" placeholder="Comment" required name="Comment">
+                <button class="w3-button w3-black w3-section" type="submit">
+                    <i class="fa fa-paper-plane"></i> SEND MESSAGE
+                </button>
+            </form>
+
+            <img src="/w3images/map.jpg" class="w3-image" style="width:100%">
+
+            <footer class="w3-center w3-black w3-panel w3-padding-16">
+            </footer>
+        </div>
+
+        <!-- End page content -->
     </div>
 
-    </div>
 </body>
 
 </html>
