@@ -1,0 +1,2 @@
+user:qwer,auth:1;
+user:asdf,auth:0;
