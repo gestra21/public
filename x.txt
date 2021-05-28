@@ -1,2 +1,2 @@
-user:qwer,auth:1;
-user:asdf,auth:0;
+user:qwer,auth:1,mt5:6061683,myFx:8378678;
+user:asdf,auth:0,mt5:6061684,myFx:8378679;
