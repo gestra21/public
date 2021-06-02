@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            background-color: rgba(0, 0, 0, 0);
+            width: 99.9%;
+            height: min-content;
+            margin: auto;
+            font-family: sans-serif;
+overflow: hidden;/*
+            /*height: max-content;*/
+        }
+
+        .example {
+            padding: 20px;
+            color: white;
+        }
+
+        /* Extra small devices (phones, 600px and down) */
+        @media only screen and (max-width: 600px) {
+            .example {
+                background: red;
+            }
+
+            .grid-container {
+                display: grid;
+                grid-template-columns: auto;
+                grid-gap: 0px;
+                background-color: #2196F3;
+                padding: 10px;
+                font-size: 16px;
+            }
+        }
+
+        /* Small devices (portrait tablets and large phones, 600px and up) */
+        @media only screen and (min-width: 600px) {
+            .example {
+                background: green;
+            }
+
+            .grid-container {
+                height: 90%;
+                display: grid;
+                grid-template-columns: 49.9999% 49.9999%;
+                grid-gap: 0px;
+                background-color: #2196F3;
+                padding: 10px;
+                font-size: 16px;
+            }
+        }
+
+        /* Medium devices (landscape tablets, 768px and up) */
+        @media only screen and (min-width: 768px) {
+            .example {
+                background: blue;
+            }
+
+            .grid-container {
+                display: grid;
+                grid-template-columns: 49.75% 49.75%;
+                grid-gap: 0px;
+                background-color: #2196F3;
+                font-size: 16px;
+            }
+        }
+
+        /* Large devices (laptops/desktops, 992px and up) */
+        @media only screen and (min-width: 992px) {
+            .example {
+                background: orange;
+            }
+
+            .grid-container {
+                display: grid;
+                grid-template-columns: 33% 33% 33%;
+                grid-gap: 0px;
+                background-color: #2196F3;
+                font-size: 16px;
+            }
+
+            .bottomBar {
+                grid-area: 3 / 1 / 3 / 4;
+            }
+        }
+
+        /* Extra large devices (large laptops and desktops, 1200px and up) */
+        @media only screen and (min-width: 1200px) {
+            .example {
+                background: pink;
+            }
+
+            .myHeader {
+                grid-area: myHeader;
+            }
+
+            .mySideBar {
+                height: 99.9%;
+                grid-area: mySideBar;
+                grid-template-areas: 'box''box''box''box';
+                grid-template-columns: 99.99%;
+                grid-template-rows: auto auto auto auto;
+                background-color: rgba(161, 156, 148, 0);
+                /*
+overflow: hidden;
+*/
+                display: grid;
+                grid-gap: 0px;
+                background-color: #a5bacc00;
+                font-size: 16px;
+            }
+
+            .myMainArea {
+                grid-area: myMainArea;
+                padding: 8px;
+            }
+
+            .myChartArea {
+                grid-area: myChartArea;
+                padding: 8px 16px;
+
+                height: 99.9%;
+                grid-template-areas: 'boxChartMyFx boxChartMyFx boxChartMyFx boxChartMyFx boxChartMyFx';
+                grid-template-columns: 10% auto auto auto auto;
+                grid-template-rows: 150px;
+                background-color: rgba(161, 156, 148, 0);
+                display: grid;
+                grid-gap: 0px;
+                background-color: #a5bacc00;
+                font-size: 16px;
+            }
+
+            .myBottomBar {
+                grid-area: myBottomBar;
+            }
+
+            .myLogo {
+                clear: both;
+                grid-area: myLogo;
+                padding: 0px;
+                margin: auto;
+                grid-template-areas: 'box''box';
+                grid-template-columns: 99.99%;
+                grid-template-rows: auto auto;
+            }
+
+
+            .grid-container {
+                grid-template-areas: 
+                /*'myHeader myHeader myHeader myHeader myHeader'*/
+                    'myLogo myChartArea'
+                    'mySideBar myMainArea';
+                grid-template-columns: 16.66% auto ;
+                grid-template-rows:  24.99% auto auto;
+                /* 16.66%;*/
+                background-color: rgba(161, 156, 148, 0);
+
+                height: 99.9%;
+                display: grid;
+                grid-gap: 0px;
+                background-color: #a5bacc00;
+                font-size: 16px;
+            }
+
+            .box1 {
+                grid-area: box1;
+            }
+
+            .box2 {
+                grid-area: box2;
+            }
+
+            .box3 {
+                grid-area: box3;
+            }
+
+            .box4 {
+                grid-area: box4;
+            }
+
+            .box5 {
+                grid-area: box5;
+            }
+
+            .box6 {
+                grid-area: box6;
+                height: auto;
+                margin: auto;
+            }
+
+            .grid-myMainArea {
+                height: 99.9%;
+                grid-template-areas: 'box6 box5'
+                    'box6 box5'
+                    'box2 box1';
+
+                /*  'myBottomBar myBottomBar myBottomBar myBottomBar';*/
+                grid-template-columns: 33.333% 33.333% 33.333%;
+                grid-template-rows: 33.333% 33.333% 33.333%;
+                /* 16.66%;*/
+                background-color: rgba(161, 156, 148, 0);
+
+                display: grid;
+                grid-gap: 0px;
+                background-color: #a5bacc00;
+                font-size: 16px;
+            }
+
+        }
+
+        .grid-container>div {
+            background-color: rgba(150, 150, 150, 0);
+            /*
+            box-shadow: 0px 8px 4px rgb(90, 89, 89) inset, 0px -8px
+4px  rgb(90, 89, 89) inset;/*,
+             -4px 4px 8px rgb(90, 89, 89), */
+            box-shadow: -4px 0px 2px rgb(90, 89, 89);
+            color: white;
+            border-radius: 8px;
+            text-align: center;
+            padding: auto;
+            margin: 4px;
+            font-size: 16px;
+        }
+
+        .grid-myMainArea>div {
+            width: 100%;
+            background-color: rgba(150, 150, 150, 0);
+            /*
+            box-shadow: 0px 8px 4px rgb(90, 89, 89) inset, 0px -8px
+4px  rgb(90, 89, 89) inset;/*,
+             -4px 4px 8px rgb(90, 89, 89), */
+            box-shadow: -2px 0px 2px rgb(90, 89, 89);
+            color: white;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        .grid-myBoxArea {
+            height: 99.9%;
+            grid-template-areas: 'box';
+
+            /*  'myBottomBar myBottomBar myBottomBar myBottomBar';*/
+            grid-template-columns: 33.333% 33.333% 33.333%;
+            grid-template-rows: 49.999% 49.999%;
+            /* 16.66%;*/
+            background-color: rgba(161, 156, 148, 0);
+            padding: 8px 16px;
+            ;
+            display: grid;
+            background-color: #a5bacc00;
+            font-size: 16px;
+        }
+
+        .box {
+            width: 99.99%;
+            height: auto;
+            color: rgb(124, 124, 124);
+            border-radius: 8px;
+            text-align: center;
+            margin: auto;
+            font-size: 16px;
+            border: solid 1px rgba(0, 0, 0, 0)
+        }
+
+
+        .x {
+            height: 99.9%;
+            margin: 1px;
+
+        }
+
+        .boxChartMyFx {
+            height: 150px;
+            margin: auto;
+            overflow: hidden;
+            /*border: solid 1px black;*/
+            box-shadow: -2px 0px 2px rgb(90, 89, 89);
+        }
+
+
+        /* Main color palette */
+        .myHeader {
+            background-color: rgb(255, 255, 255);
+            width: 100%;
+            padding: 2px !important;
+            margin: 0px !important;
+            box-shadow: 2px 0px 2px rgb(90, 89, 89);
+            letter-spacing: 4px;
+        }
+
+        .myHeader ul {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .myHeader ul li {
+            float: right;
+            padding: 2px 8px;
+            width: auto;
+            border: none;
+            display: block;
+            outline: 0;
+            border: none;
+            display: block;
+            overflow: hidden;
+            text-decoration: none;
+            color: inherit;
+            background-color: inherit;
+            text-align: center;
+            cursor: pointer;
+            white-space: nowrap;
+            border-left: solid 1px black;
+
+        }
+
+        .myHeader ul li:hover {
+            color: #000 !important;
+            background-color: rgb(160, 160, 160) !important;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="myHeader" class="myHeader">
+        <!-- Header -->
+        <ul style="margin: 0px; padding: 0px;">
+            <li>
+                <a href="#" id="logoutButton">Logout</a>
+            </li>
+            <li>
+                <a href="/account/edit">Settings</a>
+            </li>
+            <li>
+                <a href="/checks/all">Dashboard</a>
+            </li>
+            <li>
+                <a href="/">Home</a>
+            </li>
+        </ul>
+    </header>
+
+    <div id="x1">
+        <div class="grid-container">
+            <div class="myLogo" style="box-shadow: none; margin: auto;">
+                <div class="box">
+                    <p class="box" style="width: 80%; color:#182863;letter-spacing: 2px;">GESTRA</p>
+                    <img src="C:\Users\neilf\gestra\ghPublic\sib\logo.svg" alt="Flowers" style="width:100%;">
+                </div>
+            </div>
+
+            <div class="myChartArea">
+
+
+
+                <div class="boxChartMyFx" style="width: 100%; height: max-content; margin: 4px auto;">
+                    <a href="https://www.myfxbook.com/members/gestra21/mt5-6061683/8378678"><img alt="widget"
+                            src="https://widgets.myfxbook.com/widgets/8378678/small.jpg" /></a>
+                </div>
+
+                <div class="boxChartMyFx">
+                    <a href="https://www.myfxbook.com/statements/8378678/statement.pdf"><img alt="widget"
+                            src="https://widgets.myfxbook.com/custom-widget?id=8378678&width=300&height=170&bart=0&linet=1&symbol=USDCHF&magic=-1&title=Balance&titles=12&bgColor=ffffff&gridColor=828282&lineColor=0024ff&barColor=4a63fb&bar1Color=a1adf5&fontColor=525252&chartbgc=ffffff&equityColor=f558c9" /></a>
+                </div>
+                <div class="boxChartMyFx">
+                    <a href="https://www.myfxbook.com/statements/8378678/statement.pdf"><img alt="widget"
+                            src="https://widgets.myfxbook.com/custom-widget?id=8378678&width=300&height=170&bart=0&linet=0&symbol=USDCHF&magic=-1&title=Profit&titles=12&bgColor=ffffff&gridColor=828282&lineColor=0024ff&barColor=4a63fb&bar1Color=a1adf5&fontColor=525252&chartbgc=ffffff&equityColor=f558c9" /></a>
+                </div>
+                <div class="boxChartMyFx"><a href="https://www.myfxbook.com/statements/8378678/statement.pdf"><img
+                            alt="widget"
+                            src="https://widgets.myfxbook.com/custom-widget?id=8378678&width=300&height=170&bart=1&linet=2&symbol=USDCHF&magic=-1&title=Profit&titles=12&bgColor=ffffff&gridColor=828282&lineColor=0024ff&barColor=4a63fb&bar1Color=a1adf5&fontColor=525252&chartbgc=ffffff&equityColor=f558c9" /></a>
+                </div>
+                <div class="boxChartMyFx">
+                    <a href="https://www.myfxbook.com/statements/8378678/statement.pdf"><img alt="widget"
+                            src="https://widgets.myfxbook.com/custom-widget?id=8378678&width=300&height=170&bart=1&linet=5&symbol=USDCHF&magic=-1&title=Profit&titles=12&bgColor=ffffff&gridColor=828282&lineColor=0024ff&barColor=4a63fb&bar1Color=a1adf5&fontColor=525252&chartbgc=ffffff&equityColor=f558c9" /></a>
+                </div>
+            </div>
+            <div class="mySideBar" style="box-shadow: none;">
+                <div class="box">
+                </div>
+            </div>
+            <!--<div class="myBottomBar">myBottomBar</div>-->
+            <div class="grid-myMainArea myMainArea">
+                <div class="box1">
+                    <p class="box"></p>
+                </div>
+                <div class="box2">
+                    <a href="https://www.myfxbook.com/members/gestra21/mt5-6061683/8378678"><img alt="widget" src="https://widgets.myfxbook.com/systems-custom-widget?uid=2276992&width=400&height=250&title=Systems&titles=12&showAllSystems=true&bgColor=ffffff&gridColor=bdbdbd&fontColor=525252&chartbgc=ffffff"/></a>
+                </div>
+                <div class="box5">
+                    <script type="text/javascript"
+                        src="https://widgets.myfxbook.com/scripts/fxBrowser.js?oid=8378678"></script>
+                </div>
+                <!-- myfxbook.com open trades widget - End -->
+
+            
+                <div class="box6">
+                <script type="text/javascript"
+                    src="https://widgets.myfxbook.com/scripts/fxOpenTrades.js?oid=8378678&link=1"></script>
+            <script type="text/javascript">showOpenTradesWidget()</script>
+            </div>
+
+            </div>
+            
+        </div>
+    </div>
+    </div>
+    <script>
+        var x = (window.innerHeight * 0.99999 - document.getElementById("myHeader").scrollHeight);
+        document.getElementById("x").setAttribute("style", "height:" + x + "px;");
+        var x1 = (document.getElementById("myHeader").scrollHeight);
+        document.getElementById("x1").setAttribute("style", "height:" + x1 + "px;");
+    </script>
+
+</body>
+
+</html>
