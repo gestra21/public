@@ -154,10 +154,10 @@ overflow: hidden;
             .grid-container {
                 grid-template-areas: 
                 /*'myHeader myHeader myHeader myHeader myHeader'*/
-                    'myLogo myChartArea'
-                    'mySideBar myMainArea';
-                grid-template-columns: 16.66% auto ;
-                grid-template-rows:  24.99% auto auto;
+                    'myChartArea'
+                    'myMainArea';
+                grid-template-columns: auto ;
+                grid-template-rows:  24.99% auto;
                 /* 16.66%;*/
                 background-color: rgba(161, 156, 148, 0);
 
@@ -190,15 +190,13 @@ overflow: hidden;
 
             .box6 {
                 grid-area: box6;
-                height: auto;
-                margin: auto;
             }
 
             .grid-myMainArea {
                 height: 99.9%;
-                grid-template-areas: 'box6 box5'
-                    'box6 box5'
-                    'box2 box1';
+                grid-template-areas: 'box2 box5'
+                    'box3 box5'
+                    'box6 box5';
 
                 /*  'myBottomBar myBottomBar myBottomBar myBottomBar';*/
                 grid-template-columns: 33.333% 33.333% 33.333%;
@@ -326,6 +324,8 @@ overflow: hidden;
             background-color: rgb(160, 160, 160) !important;
             border-radius: 5px;
         }
+
+        .myLogo{visibility: hidden;}
     </style>
 </head>
 
@@ -350,20 +350,12 @@ overflow: hidden;
 
     <div id="x1">
         <div class="grid-container">
-            <div class="myLogo" style="box-shadow: none; margin: auto;">
-                <div class="box">
-                    <p class="box" style="width: 80%; color:#182863;letter-spacing: 2px;">GESTRA</p>
-                    <img src="/public/logo.svg" alt="Flowers" style="width:100%;">
-                </div>
-            </div>
 
             <div class="myChartArea">
 
-
-
-                <div class="boxChartMyFx" style="width: 100%; height: max-content; margin: 4px auto;">
-                    <a href="https://www.myfxbook.com/members/gestra21/mt5-5162802/8509505"><img alt="widget"
-                            src="https://widgets.myfxbook.com/widgets/8509505/small.jpg" /></a>
+   <div class="boxChartMyFx"style="box-shadow: none; margin: auto;">
+                    <p class="box" style="width: 70%; color:#182863;letter-spacing: 2px;">GESTRA</p>
+                    <img src="C:\Users\neilf\gestra\ghPublic\sib\logo.svg" alt="Flowers" style="width:80%;">
                 </div>
 
                 <div class="boxChartMyFx">
@@ -389,15 +381,17 @@ overflow: hidden;
             </div>
             <!--<div class="myBottomBar">myBottomBar</div>-->
             <div class="grid-myMainArea myMainArea">
-                <div class="box1">
-                    <p class="box"></p>
-                </div>
                 <div class="box2">
-                    <a href="https://www.myfxbook.com/members/gestra21/mt5-5162802/8509505"><img alt="widget" src="https://widgets.myfxbook.com/systems-custom-widget?uid=2276992&width=400&height=250&title=Systems&titles=12&showAllSystems=true&bgColor=ffffff&gridColor=bdbdbd&fontColor=525252&chartbgc=ffffff"/></a>
+                   
+                    <a href="https://www.myfxbook.com/members/gestra21/mt5-5162802/8509505"><img style="width:24%; margin: auto;" alt="widget"
+                        src="https://widgets.myfxbook.com/widgets/8509505/small.jpg" /></a>
+                    <a href="https://www.myfxbook.com/members/gestra21/mt5-5162802/8509505"><img style="width:65%" alt="widget"
+                                src="https://widgets.myfxbook.com/widgets/8509505/large.jpg" /></a>
+                
+
                 </div>
-                <div class="box5">
-                    <script type="text/javascript"
-                        src="https://widgets.myfxbook.com/scripts/fxBrowser.js?oid=8509505"></script>
+                <div class="box3">
+                    <a href="https://www.myfxbook.com/members/gestra21/mt5-5162802/8509505"><img alt="widget" src="https://widgets.myfxbook.com/systems-custom-widget?uid=2276992&width=400&height=250&title=Systems&titles=12&showAllSystems=true&bgColor=ffffff&gridColor=bdbdbd&fontColor=525252&chartbgc=ffffff"/></a>
                 </div>
                 <!-- myfxbook.com open trades widget - End -->
 
@@ -407,6 +401,10 @@ overflow: hidden;
                     src="https://widgets.myfxbook.com/scripts/fxOpenTrades.js?oid=8509505&link=1"></script>
             <script type="text/javascript">showOpenTradesWidget()</script>
             </div>
+                <div class="box5">
+                    <script type="text/javascript"
+                        src="https://widgets.myfxbook.com/scripts/fxBrowser.js?oid=8509505"></script>
+                </div>
 
             </div>
             
