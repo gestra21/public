@@ -82,11 +82,13 @@
         <!-- Header -->
         <header class="w3-container" style="padding-top:22px">
             <h5><b><i class="fa fa-home"></i> Home</b></h5>
+            </tr>
+            <tr>
         </header>
 
 
         <div class="w3-container w3-card-4 w3-padding w3-white">
-            <div class="w3-col m6 w3-card-4 w3-padding w3-white">
+            <div class="w3-col m12 w3-card-4 w3-padding w3-white" style="font-size: 18px;">
                 <p>In questa pagina temporanea mostro qualche informazione del sistema presentato verbalmente.</p>
                 <p>Come anticipato il sistema decide in che direzione operare a seguito dell'analisi di
                     informazioni concernenti opzioni e futeres.<br></p>
@@ -97,15 +99,15 @@
                     <a href="https://www.cftc.gov/dea/futures/deacmelf.htm">www.cftc.gov/dea/futures</a>
                 </p>
                 <p>Per ulteriori informazioni: neil.filippelli@gmail.com</p>
-              <p>Le Simulazioni sono effettuate con Strategy Tester di MT5.</p>
+                <p>Le Simulazioni sono effettuate con Strategy Tester di MT5.</p>
             </div>
 
-            <div class="w3-col m6 w3-card-4 w3-padding w3-white">
-                <svg style="background-color: rgb(88, 88, 88);" viewBox="0 0 1000 400"
+            <div class="w3-col m12 w3-card-4 w3-padding w3-white">
+                <svg style="background-color: rgb(88, 88, 88); max-width: 800px;" viewBox="0 0 1000 300"
                     xmlns="http://www.w3.org/2000/svg">
 
                     <text x="50" y="40" style="font-size: 32px;" fill="white">Cftc</text>
-                    <text x="50" y="60" style="font-size: 24px;" fill="white">Option&futures</text>
+                    <text x="50" y="65" style="font-size: 24px;" fill="white">Option&futures</text>
 
                     <text x="800" y="60" style="font-size: 24px;" fill="white">Market</text>
 
@@ -140,425 +142,248 @@
         <hr />
 
         <div class="w3-container w3-card-4 w3-padding w3-white">
-            <div class="w3-col m3 w3-card-4 w3-padding w3-white">
-                <h2>Overview</h2>
-                <h5>Info</h5>
-                <p>-</p>
-                <hr>
-                <h5>Settings</h5>
-                <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
-                    <tr>
-                        <td>From</td>
-                        <td>01.07.2007</td>
-                    </tr>
-                    <tr>
-                        <td>To</td>
-                        <td>07.06.2021</td>
-                    </tr>
-                    <tr>
-                        <td>Leverage</td>
-                        <td>2.5</td>
-                    </tr>
-                    <tr>
-                        <td>Entry: mySignal</td>
-                        <td class="fa fa-check" style="color: green;"></td>
-                    </tr>
-                    <tr>
-                        <td>Entry: moving avarege</td>
-                        <td class="fa fa-check" style="color: green;"></td>
-                    </tr>
-                </table>
-            </div>
-            <div class="w3-col m9 w3-card-4 w3-padding w3-white">
-                <h2>Report</h2>
 
+            <div class="w3-col m12 w3-card-4 w3-padding w3-white">
+                <h2>Backtest 1</h2>
 
-                <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
-
-                    <tr>
-                       <td>Qualità dello Storico:</td>
-                       <td ><b>99%</b></td>
-                    </tr>
-                    <tr>
-                       <td>Barre:</td>
-                       <td ><b>86223</b></td>
-                       <td>Ticks:</td>
-                       <td ><b>19953638</b></td>
-                       <td>Simboli:</td>
-                       <td><b>1</b></td>
-                    </tr>
-                    <tr>
-                       <td>Profitto Totale Netto:</td>
-                       <td ><b>22 300.11</b></td>
-                       <td>Bilancio Drawdown Assoluto:</td>
-                       <td ><b>89.47</b></td>
-                       <td>Equità Drawdown Assoluta:</td>
-                       <td><b>438.01</b></td>
-                    </tr>
-                    <tr>
-                       <td>Profitto Lordo:</td>
-                       <td ><b>37 736.51</b></td>
-                       <td>Bilancio Drawdown Massimo:</td>
-                       <td ><b>1 515.40 (4.48%)</b></td>
-                       <td>Equità Drawdown Massima:</td>
-                       <td><b>3 099.29 (11.48%)</b></td>
-                    </tr>
-                    <tr>
-                       <td>Perdita Lorda:</td>
-                       <td ><b>-15 436.40</b></td>
-                       <td>Bilancio Drawdown Relativo:</td>
-                       <td ><b>6.99% (745.00)</b></td>
-                       <td>Equità Drawdown Relativa:</td>
-                       <td><b>12.27% (2 311.10)</b></td>
-                    </tr>
-                    <tr>
-                       <td  style="height: 10px"></td>
-                     </tr>
-                    <tr>
-                       <td>Fattore di Profitto:</td>
-                       <td ><b>2.44</b></td>
-                       <td>Payoff Atteso:</td>
-                       <td ><b>35.97</b></td>
-                       <td>Livello di Margine:</td>
-                       <td><b>408.86%</b></td>
-                    </tr>
-                    <tr>
-                       <td>Fattore di Recupero:</td>
-                       <td ><b>7.20</b></td>
-                       <td>Indice di Sharpe:</td>
-                       <td ><b>0.16</b></td>
-                       <td>Z-Score:</td>
-                       <td><b>-0.57 (42.45%)</b></td>
-                    </tr>
-                    <tr>
-                       <td>AHPR:</td>
-                       <td ><b>1.0020 (0.20%)</b></td>
-                       <td>LR Correlazione:</td>
-                       <td ><b>0.99</b></td>
-                       <td>Risultato dell' OnTester:</td>
-                       <td><b>0</b></td>
-                    </tr>
-                    <tr>
-                       <td>GHPR:</td>
-                       <td ><b>1.0019 (0.19%)</b></td>
-                       <td>LR Errore Standard:</td>
-                       <td ><b>950.82</b></td>
-                       <td></td>
-                       <td><b></b></td>
-                    </tr>
-                    <tr>
-                       <td  style="height: 10px"></td>
-                     </tr>
-                    <tr>
-                       <td>Numero di Operazioni di Trading Totali:</td>
-                       <td ><b>620</b></td>
-                       <td>Operazioni di Trading Short (vincenti %):</td>
-                       <td ><b>357 (70.59%)</b></td>
-                       <td>Operazioni di Trading Long (vincenti %):</td>
-                       <td><b>263 (73.38%)</b></td>
-                    </tr>
-                    <tr>
-                       <td>Affari Totali:</td>
-                       <td ><b>1216</b></td>
-                       <td>Operazioni di Trading in Profitto (% del totale):</td>
-                       <td ><b>445 (71.77%)</b></td>
-                       <td>Operazioni di Trading in Perdita (% del totale):</td>
-                       <td><b>175 (28.23%)</b></td>
-                    </tr>
-                    <tr>
-                       <td></td>
-                       <td>La più ampia operazione di trading in profitto:</td>
-                       <td ><b>2 404.42</b></td>
-                       <td>La più ampia operazione di trading in perdita:</td>
-                       <td><b>-1 369.56</b></td>
-                    </tr>
-                    <tr>
-                       <td></td>
-                       <td>Media operazione di trading in profitto:</td>
-                       <td ><b>84.80</b></td>
-                       <td>Media operazione di trading in perdita:</td>
-                       <td><b>-88.21</b></td>
-                    </tr>
-                    <tr>
-                       <td></td>
-                       <td>Massima vincite consecutive ($):</td>
-                       <td ><b>16 (1 580.15)</b></td>
-                       <td>Massima perdite consecutive ($):</td>
-                       <td><b>6 (-321.16)</b></td>
-                    </tr>
-                    <tr>
-                       <td></td>
-                       <td>Massimale profitti consecutivi (il numero di):</td>
-                       <td ><b>2 593.18 (7)</b></td>
-                       <td>Massimale perdite consecutive (il numero di):</td>
-                       <td><b>-1 369.56 (1)</b></td>
-                    </tr>
-                    <tr>
-                       <td></td>
-                       <td>Media vincite consecutive:</td>
-                       <td ><b>4</b></td>
-                       <td>Media perdite consecutive:</td>
-                       <td><b>1</b></td>
-                    </tr>
-                   </table>
-                <img style="width: 100%;" src="/public/eurusd1_mm_stat.png" alt="eurusd_signal_mm_h" />
-                
-                <img style="width: 100%;" src="/public/eurusd1_mm_stat-holding.png" alt="eurusd_signal_mm_h" />
-                <img style="width: 100%;" src="/public/eurusd1_mm_stat-mfemae.png" alt="eurusd_signal_mm_h" />
-                <img style="width: 100%;" src="/public/eurusd1_mm_stat-hst.png" alt="eurusd_signal_mm_h" />
-
-
-                
-            </div>
-        </div>
-        <hr>
-        <div class="w3-container w3-card-4 w3-padding w3-white">
-            <div class=" w3-col m3 w3-card-4 w3-padding w3-white">
-
-                <h2>Overview</h2>
                 <!--        BLOCCO 1        -->
                 <h5>Info</h5>
-                <p style="font-size: 12px;">
-                L'EA è impostato apre e chiude le posizioni unicamente quando riceve il segnale da parte dell'app, leva 1/1.<br> Questo segnale viene emesso unicamente sulla base dell'analisi dati concernenti le opzioni e futures, nessun informazione concernente i prezzi del sottostante è inclusa come variabile dell'algoritmo.<br>
-                In questo test non è utilizzato nessun altro strumento e non vengono impostati stop loss e take profit.</p>
+                <p style="font-size: 14px;">
+                    L'EA è impostato apre e chiude le posizioni unicamente quando riceve il segnale da parte
+                    dell'app,
+                    leva 1/1.<br> Questo segnale viene emesso unicamente sulla base dell'analisi dati concernenti le
+                    opzioni e futures, nessun informazione concernente i prezzi del sottostante è inclusa come
+                    variabile
+                    dell'algoritmo.<br>
+                    In questo test non è utilizzato nessun altro strumento e non vengono impostati stop loss e take
+                    profit.</p>
                 <hr>
-                <h5>Settings</h5>
-                <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
-                    <tr>
-                        <td>From</td>
-                        <td>01.07.2007</td>
-                    </tr>
-                    <tr>
-                        <td>To</td>
-                        <td>07.06.2021</td>
-                    </tr>
-                    <tr>
-                        <td>Leverage</td>
-                        <td>1.0</td>
-                    </tr>
-                    <tr>
-                        <td>Entry: mySignal</td>
-                        <td class="fa fa-check" style="color: green;"></td>
-                    </tr>
-                    <tr>
-                        <td>Entry: moving avarege</td>
-                        <td class="fa fa-remove" style="color: rgb(128, 0, 0);"></td>
-                    </tr>
-                </table>
-                <hr>
-                <h5>Statistic</h5>
-                <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
-                    <tr>
-                        <td>Start balance</td>
-                        <td class="fa fa-usd">10'000.00</td>
-                    </tr>
-                    <tr>
-                        <td>End balance</td>
-                        <td class="fa fa-usd">30'214.80</td>
-                    </tr>
-                    <tr>
-                        <td>Profitto netto</td>
-                        <td>202.15%</td>
-                    </tr>
-                    <tr>
-                        <td>Bilancio - Max Drowdown</td>
-                        <td>4.17%</td>
-                    </tr>
-                    <tr>
-                        <td>Equity - Max Drowdown</td>
-                        <td>12.69%</td>
-                    </tr>
-                    <tr>
-                        <td>Total trade</td>
-                        <td>28</td>
-                    </tr>
-                    <tr>
-                        <td>Profit trade</td>
-                        <td>75.0%</td>
-                    </tr>
-                    <tr>
-                        <td>Loss trade</td>
-                        <td>25.0%</td>
-                    </tr>
-                    <tr>
-                        <td>Profit vs Loss</td>
-                        <td>2.31/1</td>
-                    </tr>
-                </table>
             </div>
-                <div class="w3-col m9 w3-card-4 w3-padding w3-white">
-                    <h2>Report</h2>
-                    <iframe style="width: 100%; height: 500px;" src="/public/eurusd1_stat.html"
-                        alt="eurusd1_mm_stat"></iframe>
-                </div>
+            <table class="w3-col m3 w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
+                <tr>
+                    <td>Inizio:</td>
+                    <td><b>01.07.2007</b></td>
+                </tr>
+                <tr>
+                    <td>Fine:</td>
+                    <td><b>07.06.2021</b></td>
+                </tr>
+                <tr>
+                    <td>Leva:</td>
+                    <td><b>1.0</b></td>
+                </tr>
+                <tr>
+                    <td>Bilancio iniziale:</td>
+                    <td><b>10'000.00</b></td>
+                </tr>
+                <tr>
+                    <td>Bilancio finale:</td>
+                    <td><b>30'031.01</b></td>
+                </tr>
+                <tr>
+                    <td>Simbolo:</td>
+                    <td><b>EUR/USD</b></td>
+                </tr>
+                <tr>
+                    <td>Qualità dello Storico:</td>
+                    <td><b>99%</b></td>
+                </tr>
+                <tr>
+                    <td>Barre:</td>
+                    <td><b>86271</b></td>
+                </tr>
+                <tr>
+                    <td>Ticks:</td>
+                    <td><b>19964466</b></td>
+                </tr>
+                <tr>
+                    <td>Simboli:</td>
+                    <td><b>1</b></td>
+                </tr>
+                <tr>
+                    <td>Profitto Totale Netto:</td>
+                    <td><b>20 031.01</b></td>
+                </tr>
+                <tr>
+                    <td>Bilancio Drawdown Assoluto:</td>
+                    <td><b>0.00</b></td>
+                </tr>
+                <tr>
+                    <td>Equità Drawdown Assoluta:</td>
+                    <td><b>386.62</b></td>
+                </tr>
+                <tr>
+                    <td>Profitto Lordo:</td>
+                    <td><b>23 475.73</b></td>
+                </tr>
+                <tr>
+                    <td>Bilancio Drawdown Massimo:</td>
+                    <td><b>1 249.56 (3.99%)</b></td>
+                </tr>
+                <tr>
+                    <td>Equità Drawdown Massima:</td>
+                    <td><b>2 407.70 (9.49%)</b></td>
+                </tr>
+                <tr>
+                    <td>Perdita Lorda:</td>
+                    <td><b>-3 444.72</b></td>
+                </tr>
+                <tr>
+                    <td>Bilancio Drawdown Relativo:</td>
+                    <td><b>4.10% (430.40)</b></td>
+                </tr>
+                <tr>
+                    <td>Equità Drawdown Relativa:</td>
+                    <td><b>11.49% (2 091.04)</b></td>
+                </tr>
+                <tr>
+                    <td>Fattore di Profitto:</td>
+                    <td><b>6.81</b></td>
+                </tr>
+                <tr>
+                    <td>Payoff Atteso:</td>
+                    <td><b>690.72</b></td>
+                </tr>
+                <tr>
+                    <td>Livello di Margine:</td>
+                    <td><b>6164.40%</b></td>
+                </tr>
+                <tr>
+                    <td>Fattore di Recupero:</td>
+                    <td><b>8.32</b></td>
+                </tr>
+                <tr>
+                    <td>Indice di Sharpe:</td>
+                    <td><b>0.56</b></td>
+                </tr>
+                <tr>
+                    <td>Z-Score:</td>
+                    <td><b>1.51 (86.90%)</b></td>
+                </tr>
+                <tr>
+                    <td>AHPR:</td>
+                    <td><b>1.0411 (4.11%)</b></td>
+                </tr>
+                <tr>
+                    <td>LR Correlazione:</td>
+                    <td><b>0.98</b></td>
+                </tr>
+                <tr>
+                    <td>Risultato dell' OnTester:</td>
+                    <td><b>0</b></td>
+                </tr>
+                <tr>
+                    <td>GHPR:</td>
+                    <td><b>1.0386 (3.86%)</b></td>
+                </tr>
+                <tr>
+                    <td>LR Errore Standard:</td>
+                    <td><b>1 355.82</b></td>
+                </tr>
+                <tr>
+                    <td>Numero di Operazioni di Trading Totali:</td>
+                    <td><b>29</b></td>
+                </tr>
+                <tr>
+                    <td>Operazioni di Trading Short (vincenti %):</td>
+                    <td><b>14 (78.57%)</b></td>
+                </tr>
+                <tr>
+                    <td>Operazioni di Trading Long (vincenti %):</td>
+                    <td><b>15 (73.33%)</b></td>
+                </tr>
+                <tr>
+                    <td>Affari Totali:</td>
+                    <td><b>58</b></td>
+                </tr>
+                <tr>
+                    <td>Operazioni di Trading in Profitto (% del totale):</td>
+                    <td><b>22 (75.86%)</b></td>
+                </tr>
+                <tr>
+                    <td>Operazioni di Trading in Perdita (% del totale):</td>
+                    <td><b>7 (24.14%)</b></td>
+                </tr>
+                <tr>
+                    <td>La più ampia operazione di trading in profitto:</td>
+                    <td><b>3 555.47</b></td>
+                </tr>
+                <tr>
+                    <td>La più ampia operazione di trading in perdita:</td>
+                    <td><b>-1 249.56</b></td>
+                </tr>
+                <tr>
+                    <td>Media operazione di trading in profitto:</td>
+                    <td><b>1 067.08</b></td>
+                </tr>
+                <tr>
+                    <td>Media operazione di trading in perdita:</td>
+                    <td><b>-492.10</b></td>
+                </tr>
+                <tr>
+                    <td>Massima vincite consecutive ($):</td>
+                    <td><b>9 (11 139.74)</b></td>
+                </tr>
+                <tr>
+                    <td>Massima perdite consecutive ($):</td>
+                    <td><b>1 (-1 249.56)</b></td>
+                </tr>
+                <tr>
+                    <td>Massimale profitti consecutivi (il numero di):</td>
+                    <td><b>11 139.74 (9)</b></td>
+                </tr>
+                <tr>
+                    <td>Massimale perdite consecutive (il numero di):</td>
+                    <td><b>-1 249.56 (1)</b></td>
+                </tr>
+                <tr>
+                    <td>Media vincite consecutive:</td>
+                    <td><b>3</b></td>
+                </tr>
+                <tr>
+                    <td>Media perdite consecutive:</td>
+                    <td><b>1</b></td>
+                </tr>
+                <tr>
+                </tr>
+            </table>
+            <hr>
+            <div class=" w3-col m8 w3-card-4 w3-padding w3-white">
+                <h5 class="w3-center">balance</h5>
+                <img class="w3-col m12" src="/public/gestra1.png" alt="eurusd_signal_mm_h" />
+            </div>
+            <hr />
+            <div class=" w3-col m8 w3-card-4 w3-padding w3-white">
+            <h5 class="w3-center">holding</h5>
+            <img class="w3-col m12" src="/public/gestra1-holding.png" alt="eurusd_signal_mm_h" />
         </div>
         <hr />
-
-        <div class="w3-container w3-card-4 w3-padding w3-white">
-            <div class="w3-col m3 w3-card-4 w3-padding w3-white">
-                <h2>Overview</h2>
-                <h5>Info</h5>
-                <p>-</p>
-                <hr>
-                <h5>Settings</h5>
-                <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
-                    <tr>
-                        <td>From</td>
-                        <td>01.07.2007</td>
-                    </tr>
-                    <tr>
-                        <td>To</td>
-                        <td>07.06.2021</td>
-                    </tr>
-                    <tr>
-                        <td>Leverage</td>
-                        <td>1.0</td>
-                    </tr>
-                    <tr>
-                        <td>Entry: mySignal</td>
-                        <td class="fa fa-check" style="color: green;"></td>
-                    </tr>
-                    <tr>
-                        <td>Entry: moving avarege</td>
-                        <td class="fa fa-check" style="color: green;"></td>
-                    </tr>
-                </table>
-                <hr> <h5>Statistic</h5>
-                <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
-                    <tr>
-                        <td>Start balance</td>
-                        <td class="fa fa-usd">10'000.00</td>
-                    </tr>
-                    <tr>
-                        <td>End balance</td>
-                        <td class="fa fa-usd">32'300.11</td>
-                    </tr>
-                    <tr>
-                        <td>Profitto netto</td>
-                        <td>223.11%</td>
-                    </tr>
-                    <tr>
-                        <td>Bilancio - Max Drowdown</td>
-                        <td>6.99%</td>
-                    </tr>
-                    <tr>
-                        <td>Equity - Max Drowdown</td>
-                        <td>12.27%</td>
-                    </tr>
-                    <tr>
-                        <td>Total trade</td>
-                        <td>620</td>
-                    </tr>
-                    <tr>
-                        <td>Profit trade</td>
-                        <td>71.77%</td>
-                    </tr>
-                    <tr>
-                        <td>Loss trade</td>
-                        <td>28.23%</td>
-                    </tr>
-                    <tr>
-                        <td>Avg profit/loss trade</td>
-                        <td>96/100</td>
-                    </tr>
-                </table>
+        <div class=" w3-col m8 w3-card-4 w3-padding w3-white">
+            <h5 class="w3-center">mfemae</h5><img class="w3-col m12" src="/public/gestra1-mfemae.png"
+                alt="eurusd_signal_mm_h" />
             </div>
-            
-                <div class="w3-col m9 w3-card-4 w3-padding w3-white">
-                    
-                <h2>Report</h2>
-                    <iframe style="width: 100%; height: 500px;" src="/public/eurusd1_mm_stat.html"
-                        alt="eurusd1_mm_stat"></iframe>
-                </div>
+            <hr />
+            <div class=" w3-col m8 w3-card-4 w3-padding w3-white">
+            <h5 class="w3-center">hst</h5>
+            <img class="w3-col m12" src="/public/gestra1-hst.png" alt="eurusd_signal_mm_h" />
+</div>
+
+
         </div>
-        <hr />
-        <div class="w3-container w3-card-4 w3-padding w3-white">
-            <div class="w3-col m3 w3-card-4 w3-padding w3-white">
-                <h2>Overview</h2>
-                <h5>Info</h5>
-                <p>-</p>
-                <hr>
-                <h5>Settings</h5>
-                <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
-                    <tr>
-                        <td>From</td>
-                        <td>01.07.2007</td>
-                    </tr>
-                    <tr>
-                        <td>To</td>
-                        <td>07.06.2021</td>
-                    </tr>
-                    <tr>
-                        <td>Leverage</td>
-                        <td>2.5</td>
-                    </tr>
-                    <tr>
-                        <td>Entry: mySignal</td>
-                        <td class="fa fa-check" style="color: green;"></td>
-                    </tr>
-                    <tr>
-                        <td>Entry: moving avarege</td>
-                        <td class="fa fa-check" style="color: green;"></td>
-                    </tr>
-                </table>
-                <hr>
-                <h5>Statistic</h5>
-                <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
-                    <tr>
-                        <td>Start balance</td>
-                        <td class="fa fa-usd">10'000.00</td>
-                    </tr>
-                    <tr>
-                        <td>End balance</td>
-                        <td class="fa fa-usd">148'954.99</td>
-                    </tr>
-                    <tr>
-                        <td>Profitto netto</td>
-                        <td>1'389.54%</td>
-                    </tr>
-                    <tr>
-                        <td>Bilancio - Max Drowdown</td>
-                        <td>16.74%</td>
-                    </tr>
-                    <tr>
-                        <td>Equity - Max Drowdown</td>
-                        <td>28.31%</td>
-                    </tr>
-                    <tr>
-                        <td>Total trade</td>
-                        <td>654</td>
-                    </tr>
-                    <tr>
-                        <td>Profit trade</td>
-                        <td>73.24%</td>
-                    </tr>
-                    <tr>
-                        <td>Loss trade</td>
-                        <td>26.76%</td>
-                    </tr>
-                    <tr>
-                        <td>Avg profit/loss trade</td>
-                        <td>81/100</td>
-                    </tr>
-                </table><br>
-            </div>
-                <div class="w3-col m9 w3-card-4 w3-padding w3-white">
-                    <h2>Report</h2>
-                    <iframe style="width: 100%; height: 500px;" src="/public/eurusd2.5_mm_stat.html"
-                        alt="eurusd2.5_mm_stat"></iframe>
-                </div>
-            </div>
-        </div>
-        <hr />
+    </div>
+    <hr />
 
-        <hr>
+    </div>
+    <hr />
 
-        <!-- Footer -->
-        <footer class="w3-container w3-padding-16 w3-light-grey">
-            <h4>FOOTER</h4>
-        </footer>
+    <hr>
 
-        <!-- End page content -->
+    <!-- Footer -->
+    <footer class="w3-container w3-padding-16 w3-light-grey">
+        <h4>FOOTER</h4>
+    </footer>
+
+    <!-- End page content -->
     </div>
 
     <script>
