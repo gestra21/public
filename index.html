@@ -1,4 +1,376 @@
+<!DOCTYPE html>
+<html>
+<title>gs_d</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    html,
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        font-family: "Raleway", sans-serif
+    }
+</style>
 
+<body class="w3-light-grey">
+
+    <!-- Top container -->
+    <div class="w3-bar w3-top w3-white w3-large" style="z-index:4">
+        <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey"
+            onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
+        <span class="w3-bar-item w3-hide-large w3-hover-none w3-hover-text-light-grey w3-right">
+            <img src="/public/logo.svg" alt="logo" style="float: right; width:24.9999%;">
+
+        </span>
+    </div>
+
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:250px;" id="mySidebar"><br>
+        <div class="w3-container w3-row">
+            <div class="w3-col s4">
+                <img src="/w3images/avatar2.png" class="w3-circle w3-margin-right" style="width:46px">
+            </div>
+            <div class="w3-col s8 w3-bar">
+                <span>Welcome, <strong>userName</strong></span><br>
+                <a href="#" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i></a>
+                <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user"></i></a>
+                <a href="#" class="w3-bar-item w3-button"><i class="fa fa-cog"></i></a>
+            </div>
+        </div>
+        <hr>
+        <div class="w3-bar-block">
+            <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black"
+                onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-home"></i> 
+                Home</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding"><i
+                    class="fa fa-users fa-fw"></i>  Dashboard</a>
+
+            <!--   <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-eye fa-fw"></i>  Views</a>
+      <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-users fa-fw"></i>  Traffic</a>
+      <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bullseye fa-fw"></i>  Geo</a>
+      <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-diamond fa-fw"></i>  Orders</a>
+      <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bell fa-fw"></i>  News</a>
+      <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bank fa-fw"></i>  General</a>
+      <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-history fa-fw"></i>  History</a>
+      <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cog fa-fw"></i>  Settings</a>
+      -->
+            <br><br>
+        </div>
+
+        <div class="w3-container">
+            <img src="/public/logo.svg" alt="logo" style="margin: auto 20% auto 20%;  width:59.99%;">
+        </div>
+    </nav>
+
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer"
+        title="close side menu" id="myOverlay"></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:300px;margin-top:43px;">
+
+        <!-- Header -->
+        <header class="w3-container" style="padding-top:22px">
+            <h5><b><i class="fa fa-home"></i> Home</b></h5>
+            </tr>
+            <tr>
+        </header>
+
+
+        <div class="w3-container w3-card-4 w3-padding w3-white">
+            <div class="w3-col m12 w3-card-4 w3-padding w3-white" style="font-size: 18px;">
+                <p>In questa pagina temporanea mostro qualche informazione del sistema presentato verbalmente.</p>
+                <p>Come anticipato il sistema decide in che direzione operare a seguito dell'analisi di
+                    informazioni concernenti opzioni e futeres.<br></p>
+                <p>Il link indicato reindirizza alla homepage del sito che pubblica i dati che utilizzo per costruire la base del segnale -->
+                    <a href="https://www.cftc.gov/">www.cftc.gov</a>
+                </p>
+                <p>e il seguente link mostra il file contente i dati di questa settimana -->
+                    <a href="https://www.cftc.gov/dea/futures/deacmelf.htm">www.cftc.gov/dea/futures</a>
+                </p>
+                
+                <p>Le Simulazioni sono effettuate con Strategy Tester di MT5.</p>
+            </div>
+
+            <div class="w3-col m12 w3-card-4 w3-padding w3-white">
+                <svg style="background-color: rgb(88, 88, 88); max-width: 800px;" viewBox="0 0 1000 300"
+                    xmlns="http://www.w3.org/2000/svg">
+
+                    <text x="50" y="40" style="font-size: 32px;" fill="white">Cftc</text>
+                    <text x="50" y="65" style="font-size: 24px;" fill="white">Option&futures</text>
+
+                    <text x="800" y="60" style="font-size: 24px;" fill="white">Market</text>
+
+                    <text x="450" y="150" style="font-size: 32px;" fill="white">Signal</text>
+
+                    <text x="300" y="250" style="font-size: 32px;" fill="white">Gestra app</text>
+                    <text x="600" y="250" style="font-size: 32px;" fill="white">User</text>
+                    <!--<image x="32" y="22" style="width: 10%;" href="/public/logo.svg"/>-->
+                    <line x1="1000" y1="100" x2="400" y2="100"
+                        style="fill:none;stroke-width: 1;stroke:rgb(255, 255, 255);stroke-dasharray:2,2" />
+
+
+                    <polygon points="350,220 200,70 200,85 215,70 200,70"
+                        style="fill:rgb(255, 255, 255);stroke:rgb(255, 255, 255);stroke-width:1;fill-rule:evenodd;" />
+                    <polygon points="150,70 300,220 300,205 285,220 300,220"
+                        style="fill:rgb(255, 255, 255);stroke:rgb(255, 255, 255);stroke-width:1;fill-rule:evenodd;" />
+
+                    <polygon points="400,220 550,70 550,85 535,70 550,70"
+                        style="fill:rgb(255, 255, 255);stroke:rgb(255, 255, 255);stroke-width:1;fill-rule:evenodd;" />
+
+                    <polygon points="525,145 600,220 600,205 585,220 600,220"
+                        style="fill:rgb(255, 255, 255);stroke:rgb(255, 255, 255);stroke-width:1;fill-rule:evenodd;" />
+
+                    <polygon points="585,240 465,240 480,247 480,233 465,240"
+                        style="fill:rgb(255, 255, 255);stroke:rgb(255, 255, 255);stroke-width:1;fill-rule:evenodd;" />
+                    <polygon points="650,220 800,70 800,85 785,70 800,70"
+                        style="fill:rgb(255, 255, 255);stroke:rgb(255, 255, 255);stroke-width:1;fill-rule:evenodd;" />
+
+                </svg>
+            </div>
+        </div>
+        <hr />
+
+        <div class="w3-container w3-card-4 w3-padding w3-white">
+
+            <div class="w3-col m12 w3-card-4 w3-padding w3-white">
+                <h2>Backtest 1</h2>
+
+                <!--        BLOCCO 1        -->
+                <h5>Info</h5>
+                <p style="font-size: 14px;">
+                    L'EA è impostato apre e chiude le posizioni unicamente quando riceve il segnale da parte
+                    dell'app,
+                    leva 1/1.<br> Questo segnale viene emesso unicamente sulla base dell'analisi dati concernenti le
+                    opzioni e futures, nessun informazione concernente i prezzi del sottostante è inclusa come
+                    variabile
+                    dell'algoritmo.<br>
+                    In questo test non è utilizzato nessun altro strumento e non vengono impostati stop loss e take
+                    profit.</p>
+                <hr>
+            </div>
+
+            <div class="w3-col m3 w3-left w3-card-4 w3-padding w3-white">
+                <h2>Backtest 1</h2>
+            </div>
+            <div class=" w3-col m9 w3-right w3-card-4 w3-padding w3-white">
+                <h5 class="w3-col m11 w3-center">balance</h5>
+                <img class="w3-col m11  w3-right" src="/public/gestra1.png" alt="eurusd_signal_mm_h" />
+           
+                <h5 class="w3-col m11 w3-center">holding</h5>
+                <img class="w3-col m11  w3-right" src="/public/gestra1-holding.png" alt="eurusd_signal_mm_h" />
+                
+                <h5 class="w3-col m11 w3-center">mfemae</h5>
+                <img class="w3-col m11  w3-right" src="/public/gestra1-mfemae.png"  alt="eurusd_signal_mm_h" />
+                
+                
+                <h5 class="w3-col m11 w3-center">hst</h5>
+                <img class="w3-col m11  w3-right" src="/public/gestra1-hst.png" alt="eurusd_signal_mm_h" />
+                
+
+            </div>
+            <div class="w3-col m3 w3-left w3-card-4 w3-padding w3-white">
+            <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
+                <tr>
+                    <td>Inizio:</td>
+                    <td><b>01.07.2007</b></td>
+                </tr>
+                <tr>
+                    <td>Fine:</td>
+                    <td><b>07.06.2021</b></td>
+                </tr>
+                <tr>
+                    <td>Leva:</td>
+                    <td><b>1.0</b></td>
+                </tr>
+                <tr>
+                    <td>Bilancio iniziale:</td>
+                    <td><b>10'000.00</b></td>
+                </tr>
+                <tr>
+                    <td>Bilancio finale:</td>
+                    <td><b>30'031.01</b></td>
+                </tr>
+                <tr>
+                    <td>Simbolo:</td>
+                    <td><b>EUR/USD</b></td>
+                </tr>
+                <tr>
+                    <td>Qualità dello Storico:</td>
+                    <td><b>99%</b></td>
+                </tr>
+                <tr>
+                    <td>Barre:</td>
+                    <td><b>86271</b></td>
+                </tr>
+                <tr>
+                    <td>Ticks:</td>
+                    <td><b>19964466</b></td>
+                </tr>
+                <tr>
+                    <td>Simboli:</td>
+                    <td><b>1</b></td>
+                </tr>
+                <tr>
+                    <td>Profitto Totale Netto:</td>
+                    <td><b>20 031.01</b></td>
+                </tr>
+                <tr>
+                    <td>Bilancio Drawdown Assoluto:</td>
+                    <td><b>0.00</b></td>
+                </tr>
+                <tr>
+                    <td>Equità Drawdown Assoluta:</td>
+                    <td><b>386.62</b></td>
+                </tr>
+                <tr>
+                    <td>Profitto Lordo:</td>
+                    <td><b>23 475.73</b></td>
+                </tr>
+                <tr>
+                    <td>Bilancio Drawdown Massimo:</td>
+                    <td><b>1 249.56 (3.99%)</b></td>
+                </tr>
+                <tr>
+                    <td>Equità Drawdown Massima:</td>
+                    <td><b>2 407.70 (9.49%)</b></td>
+                </tr>
+                <tr>
+                    <td>Perdita Lorda:</td>
+                    <td><b>-3 444.72</b></td>
+                </tr>
+                <tr>
+                    <td>Bilancio Drawdown Relativo:</td>
+                    <td><b>4.10% (430.40)</b></td>
+                </tr>
+                <tr>
+                    <td>Equità Drawdown Relativa:</td>
+                    <td><b>11.49% (2 091.04)</b></td>
+                </tr>
+                <tr>
+                    <td>Fattore di Profitto:</td>
+                    <td><b>6.81</b></td>
+                </tr>
+                <tr>
+                    <td>Payoff Atteso:</td>
+                    <td><b>690.72</b></td>
+                </tr>
+                <tr>
+                    <td>Livello di Margine:</td>
+                    <td><b>6164.40%</b></td>
+                </tr>
+                <tr>
+                    <td>Fattore di Recupero:</td>
+                    <td><b>8.32</b></td>
+                </tr>
+                <tr>
+                    <td>Indice di Sharpe:</td>
+                    <td><b>0.56</b></td>
+                </tr>
+                <tr>
+                    <td>Z-Score:</td>
+                    <td><b>1.51 (86.90%)</b></td>
+                </tr>
+                <tr>
+                    <td>AHPR:</td>
+                    <td><b>1.0411 (4.11%)</b></td>
+                </tr>
+                <tr>
+                    <td>LR Correlazione:</td>
+                    <td><b>0.98</b></td>
+                </tr>
+                <tr>
+                    <td>Risultato dell' OnTester:</td>
+                    <td><b>0</b></td>
+                </tr>
+                <tr>
+                    <td>GHPR:</td>
+                    <td><b>1.0386 (3.86%)</b></td>
+                </tr>
+                <tr>
+                    <td>LR Errore Standard:</td>
+                    <td><b>1 355.82</b></td>
+                </tr>
+                <tr>
+                    <td>Numero di Operazioni di Trading Totali:</td>
+                    <td><b>29</b></td>
+                </tr>
+                <tr>
+                    <td>Operazioni di Trading Short (vincenti %):</td>
+                    <td><b>14 (78.57%)</b></td>
+                </tr>
+                <tr>
+                    <td>Operazioni di Trading Long (vincenti %):</td>
+                    <td><b>15 (73.33%)</b></td>
+                </tr>
+                <tr>
+                    <td>Affari Totali:</td>
+                    <td><b>58</b></td>
+                </tr>
+                <tr>
+                    <td>Operazioni di Trading in Profitto (% del totale):</td>
+                    <td><b>22 (75.86%)</b></td>
+                </tr>
+                <tr>
+                    <td>Operazioni di Trading in Perdita (% del totale):</td>
+                    <td><b>7 (24.14%)</b></td>
+                </tr>
+                <tr>
+                    <td>La più ampia operazione di trading in profitto:</td>
+                    <td><b>3 555.47</b></td>
+                </tr>
+                <tr>
+                    <td>La più ampia operazione di trading in perdita:</td>
+                    <td><b>-1 249.56</b></td>
+                </tr>
+                <tr>
+                    <td>Media operazione di trading in profitto:</td>
+                    <td><b>1 067.08</b></td>
+                </tr>
+                <tr>
+                    <td>Media operazione di trading in perdita:</td>
+                    <td><b>-492.10</b></td>
+                </tr>
+                <tr>
+                    <td>Massima vincite consecutive ($):</td>
+                    <td><b>9 (11 139.74)</b></td>
+                </tr>
+                <tr>
+                    <td>Massima perdite consecutive ($):</td>
+                    <td><b>1 (-1 249.56)</b></td>
+                </tr>
+                <tr>
+                    <td>Massimale profitti consecutivi (il numero di):</td>
+                    <td><b>11 139.74 (9)</b></td>
+                </tr>
+                <tr>
+                    <td>Massimale perdite consecutive (il numero di):</td>
+                    <td><b>-1 249.56 (1)</b></td>
+                </tr>
+                <tr>
+                    <td>Media vincite consecutive:</td>
+                    <td><b>3</b></td>
+                </tr>
+                <tr>
+                    <td>Media perdite consecutive:</td>
+                    <td><b>1</b></td>
+                </tr>
+                <tr>
+                </tr>
+            </table>
+            <hr />
+
+        </div>
+
+        
         <div class="w3-container w3-card-4 w3-padding w3-white">
 
             <div class="w3-col m12 w3-card-4 w3-padding w3-white">
@@ -209,3 +581,47 @@
             <hr />
 
         </div>
+    </div>
+    <hr />
+
+    </div>
+    <hr />
+
+    <hr>
+
+    <!-- Footer -->
+    <footer class="w3-container w3-padding-16 w3-light-grey">
+        <h4>FOOTER</h4>
+    </footer>
+
+    <!-- End page content -->
+    </div>
+
+    <script>
+        // Get the Sidebar
+        var mySidebar = document.getElementById("mySidebar");
+
+        // Get the DIV with overlay effect
+        var overlayBg = document.getElementById("myOverlay");
+
+        // Toggle between showing and hiding the sidebar, and add overlay effect
+        function w3_open() {
+            if (mySidebar.style.display === 'block') {
+                mySidebar.style.display = 'none';
+                overlayBg.style.display = "none";
+            } else {
+                mySidebar.style.display = 'block';
+                overlayBg.style.display = "block";
+            }
+        }
+
+        // Close the sidebar with the close button
+        function w3_close() {
+            mySidebar.style.display = "none";
+            overlayBg.style.display = "none";
+        }
+    </script>
+
+</body>
+
+</html>
